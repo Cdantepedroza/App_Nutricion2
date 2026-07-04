@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NutriRutina - Tu progreso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/progreso.css">
+</head>
+<body class="progress-page">
+  <header class="progress-header">
+    <div class="progress-title-group">
+      <div class="progress-avatar">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWDzNxDqG4BP1zbDbpJS7pLbrR-j9U_jhqBLOEA0WD1jDiSIBpVnt8s_a_yShSHmSCnsZak28eu3qTkhgFfUpFdCp_kosDt2NdPDXS1idCu1Y6YmqHuAG9miNoR5ALZkC6R8bmvNQjgO3rrYtNk5Vj_H0k4H4mgqAjdgepO8K-KRn3gmFBfBW9agw00diI4dFB02ELOaRpq34OpAUDyH1wXPLd606Ig1ob95yCFlI3iGlQV2kxsFMVUg"
+          alt="Foto de perfil."
+        >
+      </div>
+      <h1>Tu avance</h1>
+    </div>
+
+    <button class="progress-notification" type="button" aria-label="Ver notificaciones">
+      <span class="material-symbols-outlined" aria-hidden="true">notifications</span>
+    </button>
+  </header>
+
+  <main class="progress-content">
+    <section class="motivation-card">
+      <div class="motivation-icon">
+        <span class="material-symbols-outlined" aria-hidden="true">flare</span>
+      </div>
+      <div>
+        <p>Buen avance, esta semana organizaste mejor tus comidas.</p>
+        <span>&ldquo;La constancia se construye con pasos peque&ntilde;os.&rdquo;</span>
+      </div>
+    </section>
+
+    <section class="progress-overview" aria-label="Resumen de progreso">
+      <article class="progress-stat-card">
+        <div class="progress-ring-wrap" aria-label="75 por ciento de comidas planificadas">
+          <svg viewBox="0 0 96 96">
+            <circle class="ring-track" cx="48" cy="48" r="40"></circle>
+            <circle class="progress-ring" cx="48" cy="48" r="40" data-progress="75"></circle>
+          </svg>
+          <strong>75%</strong>
+        </div>
+        <h2>Comidas planificadas</h2>
+      </article>
+
+      <article class="progress-stat-card">
+        <div class="streak-icon">
+          <span class="material-symbols-outlined filled-icon" aria-hidden="true">local_fire_department</span>
+        </div>
+        <strong>4 d&iacute;as</strong>
+        <h2>Racha saludable</h2>
+      </article>
+    </section>
+
+    <section class="wellness-metrics" aria-labelledby="metrics-title">
+      <h2 id="metrics-title">M&eacute;tricas de bienestar</h2>
+
+      <article class="metric-card">
+        <div class="metric-row">
+          <div>
+            <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+            <h3>Tiempo ahorrado</h3>
+          </div>
+          <strong>+2.5h</strong>
+        </div>
+        <div class="metric-bar" aria-hidden="true"><span style="width: 65%;"></span></div>
+        <p>Equivale a 3 sesiones de meditaci&oacute;n extra.</p>
+      </article>
+
+      <article class="variety-card">
+        <h3>Variedad de ingredientes</h3>
+        <p>Has usado 12 tipos de vegetales diferentes.</p>
+        <div class="ingredient-tags">
+          <span>Verdes</span>
+          <span>C&iacute;tricos</span>
+          <span>Granos</span>
+          <span>+9</span>
+        </div>
+        <span class="material-symbols-outlined nutrition-watermark" aria-hidden="true">nutrition</span>
+      </article>
+    </section>
+
+    <section class="rhythm-card" aria-labelledby="rhythm-title">
+      <div>
+        <h2 id="rhythm-title">Tu ritmo</h2>
+        <p>Constancia vs. intensidad</p>
+      </div>
+      <div class="rhythm-bars" aria-hidden="true">
+        <span style="height: 40%;"></span>
+        <span style="height: 60%;"></span>
+        <span style="height: 30%;"></span>
+        <span class="is-accent" style="height: 80%;"></span>
+        <span style="height: 50%;"></span>
+        <span style="height: 70%;"></span>
+        <span style="height: 45%;"></span>
+      </div>
+    </section>
+  </main>
+  <div data-bottom-nav data-active="progreso"></div>
+  <script src="./scripts/bottom-nav.js"></script>
+  <script src="./scripts/progreso.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriRutina - Personalizar plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/personalizar-plan.css">
+</head>
+<body class="flow-page personalize-page">
+  <header class="flow-header" aria-label="Progreso de personalizaci&oacute;n">
+    <a class="icon-button" href="./bienvenida.html" aria-label="Volver a inicio">
+      <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+    </a>
+
+    <div class="progress-dots" aria-hidden="true">
+      <span class="progress-dot is-active"></span>
+      <span class="progress-dot is-active"></span>
+      <span class="progress-dot is-active"></span>
+      <span class="progress-dot"></span>
+    </div>
+
+    <span class="header-spacer" aria-hidden="true"></span>
+  </header>
+
+  <main class="personalize-content" aria-labelledby="personalize-title">
+    <section class="intro-section">
+      <h1 id="personalize-title">Personalicemos tu plan</h1>
+      <p>Cu&eacute;ntanos un poco sobre tu d&iacute;a a d&iacute;a para adaptar las sugerencias a tu ritmo real.</p>
+    </section>
+
+    <section class="resilience-note" aria-label="Enfoque del plan">
+      <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+      <p>Hoy no buscamos perfecci&oacute;n, buscamos una buena decisi&oacute;n.</p>
+    </section>
+
+    <section class="choice-section" aria-labelledby="routine-title">
+      <div class="section-heading">
+        <span class="material-symbols-outlined filled-icon" aria-hidden="true">work</span>
+        <h2 id="routine-title">&iquest;C&oacute;mo es tu rutina?</h2>
+      </div>
+
+      <div class="routine-options" data-routine-options>
+        <button class="routine-chip" type="button">
+          <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+          Trabajo presencial
+        </button>
+        <button class="routine-chip" type="button">
+          <span class="material-symbols-outlined" aria-hidden="true">home_work</span>
+          Trabajo remoto
+        </button>
+        <button class="routine-chip" type="button">
+          <span class="material-symbols-outlined" aria-hidden="true">school</span>
+          Estudio
+        </button>
+        <button class="routine-chip" type="button">
+          <span class="material-symbols-outlined" aria-hidden="true">auto_stories</span>
+          Estudio y trabajo
+        </button>
+      </div>
+    </section>
+
+    <section class="choice-section" aria-labelledby="time-title">
+      <div class="section-heading">
+        <span class="material-symbols-outlined filled-icon" aria-hidden="true">schedule</span>
+        <h2 id="time-title">&iquest;Cu&aacute;nto tiempo tienes para cocinar?</h2>
+      </div>
+
+      <div class="time-grid" data-time-options>
+        <button class="time-card" type="button">
+          <span class="time-card-top">
+            <span class="time-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">timer_10</span>
+            </span>
+            <span class="radio-indicator" aria-hidden="true"></span>
+          </span>
+          <span class="time-title">Menos de 10 min</span>
+          <span class="time-copy">Opciones ultra r&aacute;pidas y pr&aacute;cticas.</span>
+        </button>
+
+        <button class="time-card" type="button">
+          <span class="time-card-top">
+            <span class="time-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">timer_10</span>
+            </span>
+            <span class="radio-indicator" aria-hidden="true"></span>
+          </span>
+          <span class="time-title">10 a 20 min</span>
+          <span class="time-copy">El balance perfecto entre sabor y tiempo.</span>
+        </button>
+
+        <button class="time-card" type="button">
+          <span class="time-card-top">
+            <span class="time-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">restaurant_menu</span>
+            </span>
+            <span class="radio-indicator" aria-hidden="true"></span>
+          </span>
+          <span class="time-title">M&aacute;s de 20 min</span>
+          <span class="time-copy">Para quienes disfrutan el proceso culinario.</span>
+        </button>
+
+        <button class="time-card" type="button">
+          <span class="time-card-top">
+            <span class="time-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">delivery_dining</span>
+            </span>
+            <span class="radio-indicator" aria-hidden="true"></span>
+          </span>
+          <span class="time-title">Prefiero no cocinar</span>
+          <span class="time-copy">Sugerencias inteligentes de delivery y snacks.</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="inspiration-panel" aria-label="Inspiraci&oacute;n diaria">
+      <img
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiUYq0CXUnx4PvnCBsW0t0YN8aK2sFjp030XcgRB9yYSpAP2XNpaKPINSLFKNvS5GI2fgXf6-ntd7YOhACs1xTVOMVqOtrjk7k4-dQQuVHUKV_MXHYuaHXumY4U6S83V6VhoY80W1qttYpffmtoTtSrlNKG8xcxe9uXpk5L2PGiJnV-9IasTRvEhTsZZ0AG7GRbHkZUXPykRdQ7xxu3SnB-tzZIby1VaeJaOVUpUVj8DvkrDYTVcZoOw"
+        alt="Cocina moderna con luz c&aacute;lida, frutas y libreta de planificaci&oacute;n."
+      >
+      <div class="inspiration-overlay">
+        <span>Inspiraci&oacute;n diaria</span>
+        <p>&ldquo;Tu bienestar comienza con un peque&ntilde;o plan.&rdquo;</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bottom-action">
+    <button class="create-plan-button" type="button" data-next-screen="./objetivos.html">
+      Crear mi plan
+      <span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+    </button>
+  </footer>
+
+  <script src="./scripts/personalizar-plan.js"></script>
+</body>
+</html>

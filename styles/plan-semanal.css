@@ -1,0 +1,472 @@
+.weekly-plan-page {
+  min-height: 100dvh;
+  padding-bottom: 104px;
+  background: var(--color-background);
+  color: #2c3332;
+}
+
+.weekly-header,
+.weekly-content {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.weekly-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-gutter) var(--space-margin-mobile);
+  background: var(--color-background);
+}
+
+.weekly-title-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.weekly-avatar {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border: 1px solid rgba(95, 141, 126, 0.2);
+  border-radius: 999px;
+}
+
+.weekly-avatar img,
+.meal-plan-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.weekly-title-group h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.weekly-notification {
+  display: inline-grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 999px;
+  background: transparent;
+  color: #2c3332;
+  cursor: pointer;
+}
+
+.weekly-notification:hover {
+  background: var(--color-surface-variant);
+}
+
+.weekly-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: 0 var(--space-margin-mobile);
+}
+
+.plan-tabs {
+  display: flex;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-variant);
+}
+
+.plan-tab {
+  display: inline-flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-base);
+  padding: var(--space-sm) var(--space-base);
+  border-radius: var(--radius-lg);
+  color: var(--color-on-surface-variant);
+  font-size: 16px;
+  line-height: 24px;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.plan-tab .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.plan-tab.is-active {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(47, 62, 58, 0.08);
+}
+
+.week-strip {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  margin-inline: calc(var(--space-margin-mobile) * -1);
+  padding-inline: var(--space-margin-mobile);
+  scrollbar-width: none;
+}
+
+.week-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.day-card {
+  position: relative;
+  display: inline-flex;
+  min-width: 64px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-gutter) 0;
+  border: 1px solid var(--color-outline-soft);
+  border-radius: 16px;
+  background: var(--color-surface);
+  color: #2c3332;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.day-card span {
+  color: var(--color-on-surface-variant);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+}
+
+.day-card strong {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.day-card.is-selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: 0 2px 8px rgba(95, 141, 126, 0.18);
+}
+
+.day-card.is-selected span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.day-card.is-selected::after {
+  width: 4px;
+  height: 4px;
+  margin-top: var(--space-xs);
+  border-radius: 999px;
+  background: var(--color-on-primary);
+  content: "";
+}
+
+.generate-plan-button {
+  display: inline-flex;
+  width: 100%;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-base);
+  border-radius: var(--radius-xl);
+  background: var(--color-tertiary);
+  color: var(--color-on-tertiary);
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  box-shadow: 0 12px 28px rgba(242, 169, 126, 0.2);
+  transition: transform 120ms ease;
+}
+
+.generate-plan-button.is-pressed {
+  transform: scale(0.98);
+}
+
+.weekly-guidance {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-gutter);
+  border: 1px solid rgba(95, 141, 126, 0.14);
+  border-radius: var(--radius-xl);
+  background: var(--color-soft-bg);
+  color: var(--color-primary);
+}
+
+.weekly-guidance p {
+  margin: 0;
+  color: #4a6e62;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.meal-plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gutter);
+}
+
+.weekly-meal-card,
+.empty-dinner-card {
+  border: 1px solid var(--color-outline-soft);
+  border-radius: 16px;
+  background: var(--color-surface);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.weekly-meal-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gutter);
+  padding: var(--space-gutter);
+}
+
+.meal-plan-header,
+.meal-plan-header div,
+.empty-dinner-card div {
+  display: flex;
+  align-items: center;
+}
+
+.meal-plan-header {
+  justify-content: space-between;
+}
+
+.meal-plan-header div,
+.empty-dinner-card div {
+  gap: var(--space-base);
+}
+
+.meal-plan-header .material-symbols-outlined {
+  color: var(--color-primary);
+}
+
+.meal-plan-header h2,
+.empty-dinner-card h2 {
+  margin: 0;
+  color: #2c3332;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.meal-plan-header time {
+  color: var(--color-on-surface-variant);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+}
+
+.meal-plan-body {
+  display: flex;
+  gap: var(--space-gutter);
+}
+
+.meal-plan-body img {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+}
+
+.meal-plan-body h3 {
+  margin: 0 0 var(--space-xs);
+  color: #2c3332;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.meal-plan-body p {
+  margin: 0 0 var(--space-base);
+  color: var(--color-on-surface-variant);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+}
+
+.meal-plan-body span {
+  display: inline-flex;
+  padding: 2px var(--space-base);
+  border-radius: var(--radius-lg);
+  background: rgba(95, 141, 126, 0.1);
+  color: var(--color-primary);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.meal-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-base);
+  padding-top: var(--space-gutter);
+  border-top: 1px solid var(--color-outline-soft);
+}
+
+.meal-actions button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  background: transparent;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.meal-actions button:hover {
+  color: var(--color-primary);
+}
+
+.meal-actions .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.empty-dinner-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gutter);
+  padding: var(--space-gutter);
+  border: 2px dashed var(--color-outline-soft);
+  background: transparent;
+  opacity: 0.78;
+}
+
+.empty-dinner-card .material-symbols-outlined,
+.empty-dinner-card h2 {
+  color: var(--color-on-surface-variant);
+}
+
+.empty-dinner-card a {
+  display: inline-flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-base);
+  color: var(--color-on-surface-variant);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.empty-dinner-card a:hover {
+  color: var(--color-primary);
+}
+
+.nutrition-summary {
+  padding: var(--space-md);
+  border-radius: 16px;
+  background: var(--color-secondary);
+  color: #4a3e2f;
+  box-shadow: 0 2px 8px rgba(47, 62, 58, 0.06);
+}
+
+.nutrition-summary h2 {
+  margin: 0 0 var(--space-gutter);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.calories-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-gutter);
+  color: #4a3e2f;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+}
+
+.progress-bar {
+  height: 8px;
+  overflow: hidden;
+  margin: var(--space-base) 0 var(--space-gutter);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-primary);
+}
+
+.macro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-gutter);
+}
+
+.macro-grid div {
+  text-align: center;
+}
+
+.macro-grid span {
+  display: block;
+  margin-bottom: var(--space-xs);
+  color: rgba(74, 62, 47, 0.72);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.macro-grid strong {
+  color: #4a3e2f;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.macro-grid div:nth-child(2) strong {
+  color: var(--color-primary);
+}
+
+.weekly-bottom-nav .bottom-nav-item.is-active {
+  padding-inline: var(--space-gutter);
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+@media (max-width: 390px) {
+  .weekly-title-group h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .plan-tab {
+    gap: var(--space-xs);
+    padding-inline: var(--space-xs);
+    font-size: 14px;
+  }
+
+  .calories-row {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+}

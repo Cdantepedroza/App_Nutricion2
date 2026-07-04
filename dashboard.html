@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriRutina - Dashboard diario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/dashboard.css">
+</head>
+<body class="dashboard-page">
+  <header class="dashboard-header">
+    <div class="profile-greeting">
+      <div class="avatar">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv8FSruG9t04JjBwCmngsMP40iDPb4Kg3GyfGIWbGTUj42y2bZPg3GX50eSTySOdKlUst4T1GCrTYe0McxXVp-BxyOH2ywR9edrqW4O0f6ULbm1njdnBzbWwaZhdPo0kIGNY6KPMCGwU1gSsIIiBo7Ykk5QFR5MUj-pgl5AY4Q7BTW6GtyNBNpquUDsDNxxmW-9-qFeNJk69pXz2AxujY2aB4LcNpZevs9KyePdFd4fiF_KIobhGjAXw"
+          alt="Foto de perfil de Mayra."
+        >
+      </div>
+      <h1>&iexcl;Hola, Mayra!</h1>
+    </div>
+
+    <button class="notification-button" type="button" aria-label="Ver notificaciones">
+      <span class="material-symbols-outlined" aria-hidden="true">notifications</span>
+    </button>
+  </header>
+
+  <main class="dashboard-content">
+    <nav class="period-tabs" aria-label="Periodo del resumen" data-period-tabs>
+      <button class="period-tab is-active" type="button">Diario</button>
+      <button class="period-tab" type="button" data-next-screen="./plan-semanal.html">Semanal</button>
+      <button class="period-tab" type="button">Mensual</button>
+    </nav>
+
+    <section class="wellbeing-prompt">
+      <div>
+        <span>Estado de hoy</span>
+        <p>Elige seg&uacute;n tu energ&iacute;a: normal, apurada o cansada.</p>
+      </div>
+      <a href="./modo-cansancio.html">Estoy cansada</a>
+    </section>
+
+    <section class="quick-menu" aria-label="Accesos r&aacute;pidos">
+      <button class="quick-item" type="button">
+        <span class="quick-icon"><span class="material-symbols-outlined" aria-hidden="true">lightbulb</span></span>
+        <span>Tips</span>
+      </button>
+      <button class="quick-item" type="button" data-next-screen="./lista-compras.html">
+        <span class="quick-icon"><span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span></span>
+        <span>Compras</span>
+      </button>
+      <button class="quick-item" type="button" data-next-screen="./plan-semanal.html">
+        <span class="quick-icon"><span class="material-symbols-outlined" aria-hidden="true">calendar_today</span></span>
+        <span>Plan</span>
+      </button>
+      <button class="quick-item" type="button">
+        <span class="quick-icon"><span class="material-symbols-outlined" aria-hidden="true">chat</span></span>
+        <span>Chat</span>
+      </button>
+    </section>
+
+    <section class="summary-card">
+      <div class="summary-main">
+        <p>Tu progreso hoy</p>
+        <div class="summary-count">
+          <strong>2/4</strong>
+          <span>Comidas</span>
+        </div>
+      </div>
+
+      <div class="summary-badges">
+        <span class="summary-badge summary-badge-primary">
+          <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+          25 min
+        </span>
+        <span class="summary-badge summary-badge-secondary">
+          <span class="material-symbols-outlined" aria-hidden="true">local_fire_department</span>
+          Racha: 4 d&iacute;as
+        </span>
+      </div>
+    </section>
+
+    <section class="meals-section" aria-labelledby="meals-title">
+      <div class="section-row">
+        <h2 id="meals-title">Tu alimentaci&oacute;n de hoy</h2>
+        <button class="more-button" type="button" aria-label="Ver m&aacute;s opciones">
+          <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+        </button>
+      </div>
+
+      <article class="meal-card meal-card-done">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhRfPCs02bBcIPS5F_wjFlG2Bfn2cXtBYuG057VpiuXHeC4dVYJy9vXFd8_1lQpR6zW6AUC162nJUJkeXFMiGcYyxcCzuZPU4NKmPcAXyyg11IcfCvhjDE4Pn6lMUGv0hwLelf5x7qKSdR7msdwmpHnrxqK1oEq8fPczeWA3dxVJHPFPOJ4_rng5XzU0Wcy2dWRuOh562LnH4szsk9lCrlh6f4d0_u6kuy4NTwAuG08_iJmkEEJL1Nwg"
+          alt="Bowl saludable de desayuno con yogur y frutos."
+        >
+        <div class="meal-info">
+          <p>Desayuno</p>
+          <h3>Bowl de yogur y frutos</h3>
+        </div>
+        <span class="done-status">
+          Listo
+          <span class="material-symbols-outlined filled-status" aria-hidden="true">check_circle</span>
+        </span>
+      </article>
+
+      <article class="meal-card">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgYcymHfTHUkWiUQjwOooR44xA3A7B0E-WYj3rgHChdMQCa94uuXcvaCcy0YLcfAu2URJuSfsjwRkQNEPV-RhzPw0ASF-bInnPQ5uP0GJzsdtDbRSC-83q7OtcHNohHuT9LvNtinm7owGg_LXA-sTLql8_HkF9uRUlF7I4L_GVUWpFLzdmc9LxDdHqhCMSz_-UpLOEspX2MI-7OssQV4pBRIBvo18anMVhBOrFnoszinzgSe6SY1n5Kg"
+          alt="Almuerzo nutritivo con salm&oacute;n y quinoa."
+        >
+        <div class="meal-info">
+          <p>Almuerzo</p>
+          <h3>Salm&oacute;n con quinoa</h3>
+        </div>
+        <button class="pending-button" type="button">Pendiente</button>
+      </article>
+
+      <article class="featured-meal" data-next-screen="./comida-recomendada.html" tabindex="0" role="link" aria-label="Ver cena recomendada">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF_zpzfOZd8YAlAvfk9rGfdSfqnzPLlt6U9VPoG9v3E1pftf4lv8nchCa4RQkntLLvlEZCZH_hVCzDvx5Kut7vFV_Xz_v94P8oNy3Ju-mEirIhg-A_CdGV7kAZV1Ctj2QqYnKDvQv7vr59MDkH7ujRD2JjFdR8P6116AxY4Jo_mGDpYaBYypJO7eETZvxIYWLXFHlSAgBj6RsNrllRgrTbVjw0AN1y_SfWdRlmHeZ7GUyVoWAjapMpaA"
+          alt="Cena recomendada con tostas de esp&aacute;rragos."
+        >
+        <div class="featured-content">
+          <span>Recomendada</span>
+          <p>Cena</p>
+          <h3>Tostas de esp&aacute;rragos</h3>
+        </div>
+        <span class="favorite-button" aria-hidden="true">
+          <span class="material-symbols-outlined">star</span>
+        </span>
+      </article>
+
+      <article class="meal-card meal-card-muted">
+        <span class="empty-meal-icon">
+          <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+        </span>
+        <div class="meal-info">
+          <p>Snack</p>
+          <h3>Fruta de estaci&oacute;n</h3>
+        </div>
+        <span class="optional-label">Opcional</span>
+      </article>
+    </section>
+  </main>
+  <div data-bottom-nav data-active="inicio"></div>
+  <script src="./scripts/bottom-nav.js"></script>
+  <script src="./scripts/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriRutina - Modo cansancio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/modo-cansancio.css">
+</head>
+<body class="fatigue-page">
+  <header class="fatigue-header">
+    <div class="fatigue-greeting">
+      <div class="fatigue-avatar">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8D4jxQIeTxSP4NMUjPCK095Q_Dozv4FQuwusjjbY75zBcUfGRl_PytgHjfKAjHtF__1UKve1JOAG5iGvE8HEna4GMM2OZ6VgSzlfN3KZznj7eACycnALktgG4PNPYHqAcESLQuwnTPO2wWLqeXJqTQzy_B002Eyoz1zofrB-ZnDW7PEov2pmG0mMJB19OfgG1GyQuPC-Ad6Z4B_A3mQ7FQLDznBcepEielaAEGvV5sKXDqhJvv3kb6g"
+          alt="Foto de perfil."
+        >
+      </div>
+      <h1>&iexcl;Hola!</h1>
+    </div>
+
+    <button class="fatigue-notification" type="button" aria-label="Ver notificaciones">
+      <span class="material-symbols-outlined" aria-hidden="true">notifications</span>
+    </button>
+  </header>
+
+  <main class="fatigue-content">
+    <section class="fatigue-hero">
+      <h2>&iquest;Llegaste cansada?</h2>
+      <p>Elige una opci&oacute;n r&aacute;pida y saludable sin complicarte.</p>
+    </section>
+
+    <section class="fatigue-options" aria-label="Filtros de cena r&aacute;pida" data-fatigue-options>
+      <button class="fatigue-chip is-active" type="button">Sin cocinar</button>
+      <button class="fatigue-chip" type="button">Solo 10 min</button>
+      <button class="fatigue-chip" type="button">Algo ligero</button>
+      <button class="fatigue-chip" type="button">Saludable cerca</button>
+      <button class="fatigue-chip" type="button">Con lo que tengo</button>
+    </section>
+
+    <section class="quick-recipes" aria-label="Recetas r&aacute;pidas">
+      <article class="quick-recipe-card">
+        <div class="quick-recipe-image">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHgdyzStPUQgzMaYagH9T48wnyqoTPXZY8YktWOAZg9zF0Q4H3bmf6VO8nTqBuyGkcIInbBug0hVfx9R4KoBri3h1Qkz-IaI_yVSLAgnUgmCWjcUNO3ypLGHWR9E_RZTwzow2N4rFozi_KIpaHC3ReAxz67FSRAuzd0oa9FgGUtQzDn12iQZcskD4tB4suqx4Gm2jLrNhPa8KJgzJa2g2LfuxQIz3-EPEUYu55HSQNOde840HYPum6wA"
+            alt="Yogur con fruta, avena y granola."
+          >
+          <span><span class="material-symbols-outlined" aria-hidden="true">schedule</span>5 min</span>
+        </div>
+        <div class="quick-recipe-body">
+          <h3>Yogurt con fruta y avena</h3>
+          <p>Una explosi&oacute;n de frescura y energ&iacute;a inmediata sin prender la estufa.</p>
+          <div>
+            <span>Ligero y saciante</span>
+            <button type="button" data-pressable>Preparar <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="quick-recipe-card">
+        <div class="quick-recipe-image">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqvmUr5jtgpvlDKKy8YPWkTQAPQ3_J8m5gY-DVrVGxHziGhnl1VZk0CiujozgpfyGRPPASAmlXuzXw38NLbVKWjvtRNBGhWInMsYkdGhtbOCBEbHwzn6JeYJA7D_7JHbYz1qeic5wLmeuTf4p0Cj2DcKTB6hyYq8KZ280EP-Ve8j64wM-H9q8AJPlwx6iPnmBwOFMnpZ75sProSjxQPqRoSpsrYGiPrAUU-hXQ7D-fYc44OKOeVQjFyg"
+            alt="Wrap de pollo con lechuga y palta."
+          >
+          <span><span class="material-symbols-outlined" aria-hidden="true">schedule</span>10 min</span>
+        </div>
+        <div class="quick-recipe-body">
+          <h3>Wrap de pollo</h3>
+          <p>Prote&iacute;na lista para recuperar tus m&uacute;sculos tras un largo d&iacute;a.</p>
+          <div>
+            <span>Alto en prote&iacute;na</span>
+            <button type="button" data-pressable>Preparar <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="quick-recipe-card">
+        <div class="quick-recipe-image">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgz0N16W-tcXna1ClZ5MRAbGCytdvh6mcpeXflZiWTe_Q9rp_Jqe-7vLANLhdMJ9evsAHEliObJMtb2fhMXEJamTO4FMnR1OHlYO3EOtpFMsYRne2FFX04xFLBMnI7h-Ee8r9NvUFVEU-RL1EdAwvJDl4TeMZjYZIwE3abnSih3JrBnYJtQfhFeoCeSnPEEH8YaPrlZQq3Eb1x2cg532KhPjTnyvTDowjTh27M8gHG7iUbjLHYdqYgmw"
+            alt="Ensalada de at&uacute;n con tomate, pepino y ma&iacute;z."
+          >
+          <span><span class="material-symbols-outlined" aria-hidden="true">schedule</span>8 min</span>
+        </div>
+        <div class="quick-recipe-body">
+          <h3>Ensalada de at&uacute;n</h3>
+          <p>S&uacute;per r&aacute;pida, nutritiva y no requiere cocci&oacute;n alguna.</p>
+          <div>
+            <span>Bajo en calor&iacute;as</span>
+            <button type="button" data-pressable>Preparar <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="motivation-pill" aria-label="Mensaje de apoyo">
+      <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+      <p>Lo est&aacute;s haciendo genial, descansa pronto.</p>
+    </section>
+  </main>
+  <div data-bottom-nav data-active="plan"></div>
+  <script src="./scripts/bottom-nav.js"></script>
+  <script src="./scripts/modo-cansancio.js"></script>
+</body>
+</html>

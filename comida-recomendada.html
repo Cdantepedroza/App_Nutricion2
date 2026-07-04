@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriRutina - Recomendaci&oacute;n de comida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/comida-recomendada.css">
+</head>
+<body class="recommendation-page">
+  <header class="recommendation-header">
+    <div class="header-title-group">
+      <a class="back-button" href="./dashboard.html" aria-label="Volver al dashboard">
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+      </a>
+      <h1>&iexcl;Hola!</h1>
+    </div>
+
+    <div class="nutritionist-avatar">
+      <img
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg37eOOHcsH-AFSEfjpthIJrzpQznuiTjJ_jRmdHOZFEu79ByHjCs05di3Luq9V5xH2ra8yQvxi3k57_ew48bkFPYEJA7L-1KyVTsn6RFpSRn40Xz_8-iFh8qd9JS-Sx_MTJQmhm0OEa4JygI2NDSiHlXZOcMwOF0t5Wt30W7K9BXiKYU0laavkOLIQLswUiK8XdRTisoi2-hDizmcAhBr9C3qWZ6vUniY0-DPQIkqMSiCsBkRdDsNmw"
+        alt="Nutricionista en una cocina moderna."
+      >
+    </div>
+  </header>
+
+  <main class="recommendation-content">
+    <section class="page-intro">
+      <h2>Cena r&aacute;pida para hoy</h2>
+      <p>Recomendado seg&uacute;n tu plan semanal</p>
+    </section>
+
+    <section class="recipe-card" aria-labelledby="recipe-title">
+      <div class="recipe-hero">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk6TJi-YwJJbVWUyx-JQG7J9mOMKXQF60IrlHJx27dyU33pmzWB9kEFE5_bbCaR_YHgslRV6RPDJdqNqPT0kpXd3_7EASZ9yZ88h1OaX-jrqpu_E7LTp2qbnDlVaCfsI4GAUplNYH6Hb1cRf2CTmXzhq3AcInm7N41ZANhnpozcxFwoILkcC6r6qwNG8rsP5QNbjDUt0tBBJLXvW5ejR7_rbRIDLbGITmkur7nTiNJokjxt_GXDLEzKA"
+          alt="Bowl de quinua con pollo, palta, tomate y hojas verdes."
+        >
+        <div class="recipe-hero-content">
+          <div class="recipe-badges">
+            <span>15 min</span>
+            <span>S/ 8 - S/ 12</span>
+          </div>
+          <h3 id="recipe-title">Bowl de quinua con pollo y palta</h3>
+        </div>
+      </div>
+
+      <div class="recipe-body">
+        <div class="recipe-tags">
+          <span>
+            <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+            Esfuerzo bajo
+          </span>
+          <span>
+            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+            Saludable
+          </span>
+        </div>
+
+        <div class="ingredients-block">
+          <h4>Ingredientes</h4>
+          <div class="ingredient-list">
+            <span>Quinua</span>
+            <span>Pollo</span>
+            <span>Palta</span>
+            <span>Tomate</span>
+            <span>Lechuga</span>
+          </div>
+        </div>
+
+        <div class="recipe-actions">
+          <button class="save-button" type="button" data-pressable>
+            <span class="material-symbols-outlined" aria-hidden="true">bookmark</span>
+            Guardar comida
+          </button>
+          <div class="secondary-actions">
+      <button class="secondary-action" type="button" data-pressable data-next-screen="./modo-cansancio.html">
+        <span class="material-symbols-outlined" aria-hidden="true">refresh</span>
+        Cambiar
+      </button>
+            <button class="secondary-action" type="button" data-pressable data-next-screen="./lista-compras.html">
+              <span class="material-symbols-outlined" aria-hidden="true">add_shopping_cart</span>
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alternatives-section" aria-labelledby="alternatives-title">
+      <div class="alternatives-heading">
+        <h3 id="alternatives-title">Otras alternativas</h3>
+        <button type="button">Ver todas</button>
+      </div>
+
+      <div class="alternatives-list">
+        <article class="alternative-card">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDogdwiXvhnyp_Cbvg8AXi1r5i6oubTJ2-0BtiIK-jkP2Nbw-gvtkJhgzw9aYWHLKxNNebEL8Ss_PGF4a1MK3gBXRO2DBCyROn0k7OGvqB1M-LI0rMkKCuPfWZ9H1J2c7nh54tbU9D8nBUkuHKL15IiqNnjpC1IJEx0lcqocI8x8K1YG7vg62qZ-PKWR0dWzq3ppDpYqGcwPag_81oMlOTP6sfbjWiTZHWkyzfwV-u1EXCUVh8iNNF7ow"
+            alt="Omelette de verduras con pimientos y hierbas."
+          >
+          <div>
+            <h4>Omelette de verduras</h4>
+            <p>10 min &bull; Muy f&aacute;cil</p>
+          </div>
+          <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+        </article>
+
+        <article class="alternative-card">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ7qobTE2G9HS4aaN68QnARO4f2HtF5_cfa9We7vDqdi964nUg4NDOMp_3B-DppF5rOjLq6Dqcr1DVKiILgwEmRbd9K0P2Qwt5rUkJUTkA65RvM8clM6aXdOiuV1T0WQm8xpXF0j2QBAQj90B5oYUwuW-fCek86xTupA2dWgLTHFEM5bG42Dbyb7OvKZ1BOVGZdYxxfwjBDqSEG-PokhM7c8F9VcFmTASMWCL9b8N9w036CJDnL4HftA"
+            alt="Ensalada de at&uacute;n con huevo, aceitunas y hojas verdes."
+          >
+          <div>
+            <h4>Ensalada de at&uacute;n</h4>
+            <p>5 min &bull; Sin cocci&oacute;n</p>
+          </div>
+          <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+        </article>
+      </div>
+    </section>
+  </main>
+  <div data-bottom-nav data-active="plan"></div>
+  <script src="./scripts/bottom-nav.js"></script>
+  <script src="./scripts/comida-recomendada.js"></script>
+</body>
+</html>

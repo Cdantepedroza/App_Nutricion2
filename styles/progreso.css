@@ -1,0 +1,446 @@
+.progress-page {
+  min-height: max(884px, 100dvh);
+  padding-bottom: 104px;
+  background: var(--color-background);
+  color: #2d3734;
+  -webkit-font-smoothing: antialiased;
+}
+
+.progress-header,
+.progress-content {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.progress-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-gutter) var(--space-margin-mobile);
+  background: rgba(250, 247, 240, 0.82);
+  backdrop-filter: blur(12px);
+}
+
+.progress-title-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.progress-avatar {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border: 2px solid var(--color-primary-light);
+  border-radius: 999px;
+}
+
+.progress-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.progress-title-group h1 {
+  margin: 0;
+  color: #2d3734;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.progress-notification {
+  display: inline-grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  cursor: pointer;
+  box-shadow: 0 4px 20px -2px rgba(95, 141, 126, 0.08);
+}
+
+.progress-content {
+  padding: var(--space-gutter) var(--space-margin-mobile) 0;
+}
+
+.motivation-card,
+.progress-stat-card,
+.metric-card,
+.variety-card,
+.rhythm-card {
+  background: var(--color-surface);
+  box-shadow: 0 4px 20px -2px rgba(95, 141, 126, 0.08);
+}
+
+.motivation-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-gutter);
+  margin-bottom: 32px;
+  padding: 20px;
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--radius-xl);
+  background: var(--color-soft-bg);
+}
+
+.motivation-icon {
+  display: inline-grid;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--color-primary);
+  animation: float 6s ease-in-out infinite;
+}
+
+.motivation-icon .material-symbols-outlined {
+  font-size: 32px;
+}
+
+.motivation-card p {
+  margin: 0 0 var(--space-xs);
+  color: #2d3734;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.motivation-card span {
+  color: #5b6c67;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+}
+
+.progress-overview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-gutter);
+  margin-bottom: 32px;
+}
+
+.progress-stat-card {
+  display: flex;
+  min-height: 180px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+.progress-ring-wrap {
+  position: relative;
+  display: grid;
+  width: 96px;
+  height: 96px;
+  place-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.progress-ring-wrap svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ring-track,
+.progress-ring {
+  fill: transparent;
+  stroke-width: 8;
+}
+
+.ring-track {
+  stroke: #f1f3f2;
+}
+
+.progress-ring {
+  stroke: var(--color-primary);
+  stroke-dasharray: 251.2;
+  stroke-dashoffset: 251.2;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 350ms ease;
+}
+
+.progress-ring-wrap strong,
+.progress-stat-card > strong {
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.progress-stat-card h2 {
+  margin: 0;
+  color: #2d3734;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.streak-icon {
+  display: inline-grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  margin-bottom: var(--space-sm);
+  border-radius: 999px;
+  background: rgba(255, 214, 190, 0.4);
+  color: var(--color-tertiary);
+}
+
+.streak-icon .material-symbols-outlined {
+  font-size: 40px;
+}
+
+.filled-icon {
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+.wellness-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gutter);
+  margin-bottom: 32px;
+}
+
+.wellness-metrics > h2 {
+  margin: 0;
+  color: #5b6c67;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.metric-card,
+.variety-card {
+  padding: 20px;
+  border-radius: var(--radius-xl);
+}
+
+.metric-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-gutter);
+}
+
+.metric-row div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-base);
+}
+
+.metric-row .material-symbols-outlined {
+  color: var(--color-primary);
+}
+
+.metric-row h3,
+.variety-card h3 {
+  margin: 0;
+  color: #2d3734;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.metric-row strong {
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+.metric-bar {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #f1f3f2;
+}
+
+.metric-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-primary);
+}
+
+.metric-card p,
+.variety-card p,
+.rhythm-card p {
+  margin: var(--space-base) 0 0;
+  color: #5b6c67;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+}
+
+.variety-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.ingredient-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-base);
+  margin-top: var(--space-gutter);
+}
+
+.ingredient-tags span {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  padding: 0 var(--space-sm);
+  border-radius: 999px;
+  background: rgba(168, 213, 194, 0.3);
+  border: 1px solid rgba(168, 213, 194, 0.5);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ingredient-tags span:nth-child(2) {
+  background: rgba(255, 214, 190, 0.3);
+  border-color: rgba(255, 214, 190, 0.5);
+  color: var(--color-tertiary);
+}
+
+.ingredient-tags span:last-child {
+  width: 32px;
+  justify-content: center;
+  padding: 0;
+  background: #f1f3f2;
+  border-color: transparent;
+  color: #5b6c67;
+}
+
+.nutrition-watermark {
+  position: absolute;
+  right: -16px;
+  bottom: -16px;
+  color: var(--color-primary);
+  font-size: 96px;
+  opacity: 0.05;
+}
+
+.rhythm-card {
+  position: relative;
+  min-height: 192px;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: var(--radius-xl);
+}
+
+.rhythm-card::before,
+.rhythm-card::after {
+  position: absolute;
+  border-radius: 999px;
+  content: "";
+  filter: blur(28px);
+}
+
+.rhythm-card::before {
+  top: -64px;
+  right: -64px;
+  width: 128px;
+  height: 128px;
+  background: rgba(168, 213, 194, 0.24);
+}
+
+.rhythm-card::after {
+  bottom: 40px;
+  left: 40px;
+  width: 96px;
+  height: 96px;
+  background: rgba(255, 214, 190, 0.22);
+}
+
+.rhythm-card h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.rhythm-bars {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+  display: flex;
+  height: 64px;
+  align-items: flex-end;
+  gap: var(--space-xs);
+}
+
+.rhythm-bars span {
+  flex: 1;
+  border-radius: 2px 2px 0 0;
+  background: rgba(95, 141, 126, 0.24);
+}
+
+.rhythm-bars span:nth-child(even) {
+  background: rgba(95, 141, 126, 0.36);
+}
+
+.rhythm-bars .is-accent {
+  background: rgba(242, 169, 126, 0.42);
+}
+
+.progress-bottom-nav {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px 12px 0 0;
+  backdrop-filter: blur(12px);
+}
+
+.progress-bottom-nav .bottom-nav-item.is-active {
+  padding: 6px var(--space-gutter);
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: 0 4px 12px rgba(95, 141, 126, 0.2);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 390px) {
+  .progress-overview {
+    gap: var(--space-sm);
+  }
+
+  .progress-stat-card {
+    padding: var(--space-gutter);
+  }
+}

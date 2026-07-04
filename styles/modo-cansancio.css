@@ -1,0 +1,311 @@
+.fatigue-page {
+  min-height: 100dvh;
+  padding-bottom: 104px;
+  background: var(--color-background);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+.fatigue-header,
+.fatigue-content {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.fatigue-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-gutter) var(--space-margin-mobile);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(250, 247, 240, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+.fatigue-greeting {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.fatigue-avatar {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border: 2px solid rgba(95, 141, 126, 0.2);
+  border-radius: 999px;
+}
+
+.fatigue-avatar img,
+.quick-recipe-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fatigue-greeting h1 {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.fatigue-notification {
+  display: inline-grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+}
+
+.fatigue-notification:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.fatigue-content {
+  padding: var(--space-md) var(--space-margin-mobile) 0;
+}
+
+.fatigue-hero {
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  border-radius: var(--radius-xl);
+  background: #2d3436;
+  color: var(--color-on-primary);
+}
+
+.fatigue-hero h2 {
+  max-width: 86%;
+  margin: 0 0 var(--space-base);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.fatigue-hero p {
+  max-width: 82%;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.fatigue-options {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  margin: 0 calc(var(--space-margin-mobile) * -1) var(--space-md);
+  padding: 0 var(--space-margin-mobile) var(--space-gutter);
+  scrollbar-color: #d1d8d1 transparent;
+}
+
+.fatigue-options::-webkit-scrollbar {
+  height: 4px;
+}
+
+.fatigue-options::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #d1d8d1;
+}
+
+.fatigue-chip {
+  flex: 0 0 auto;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  white-space: nowrap;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.fatigue-chip.is-active {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: 0 4px 12px rgba(95, 141, 126, 0.2);
+}
+
+.fatigue-chip.is-pulsing {
+  transform: scale(0.95);
+}
+
+.quick-recipes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-gutter);
+}
+
+.quick-recipe-card {
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quick-recipe-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quick-recipe-card:active {
+  transform: scale(0.98);
+}
+
+.quick-recipe-image {
+  position: relative;
+  height: 192px;
+}
+
+.quick-recipe-image > span {
+  position: absolute;
+  top: var(--space-base);
+  left: var(--space-base);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 4px var(--space-sm);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--color-on-primary);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.quick-recipe-image .material-symbols-outlined {
+  font-size: 14px;
+}
+
+.quick-recipe-body {
+  padding: 20px;
+}
+
+.quick-recipe-body h3 {
+  margin: 0 0 var(--space-base);
+  color: var(--color-on-background);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.quick-recipe-body p {
+  margin: 0;
+  color: var(--color-on-surface-variant);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.quick-recipe-body > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-top: var(--space-gutter);
+}
+
+.quick-recipe-body > div > span {
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.quick-recipe-body button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-base);
+  padding: 10px 20px;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  box-shadow: 0 2px 8px rgba(47, 62, 58, 0.08);
+  transition: transform 120ms ease;
+}
+
+.quick-recipe-body button.is-pressed {
+  transform: scale(0.95);
+}
+
+.quick-recipe-body button .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.motivation-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: var(--space-lg) auto var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-primary-light);
+  border-radius: 999px;
+  background: var(--color-soft-bg);
+  color: #4a6e62;
+}
+
+.motivation-pill .material-symbols-outlined {
+  font-size: 20px;
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+.motivation-pill p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.fatigue-bottom-nav {
+  background: rgba(255, 255, 255, 0.95);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px 16px 0 0;
+  backdrop-filter: blur(12px);
+}
+
+.fatigue-bottom-nav .bottom-nav-item.is-active {
+  padding: 6px var(--space-gutter);
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: 0 4px 12px rgba(95, 141, 126, 0.2);
+}
+
+@media (max-width: 390px) {
+  .quick-recipe-body > div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .quick-recipe-body button {
+    width: 100%;
+  }
+}

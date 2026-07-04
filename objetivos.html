@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriRutina - Objetivos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/objetivos.css">
+</head>
+<body class="objectives-page">
+  <div class="mesh-background" aria-hidden="true"></div>
+
+  <main class="objectives-content" aria-labelledby="objectives-title">
+    <section class="objectives-header fade-in-up">
+      <h1 id="objectives-title">&iquest;Qu&eacute; quieres lograr hoy?</h1>
+      <p>Selecciona tus objetivos principales para personalizar tu experiencia de nutrici&oacute;n y bienestar.</p>
+    </section>
+
+    <section class="objectives-grid fade-in-up" style="--delay: 140ms;" aria-label="Objetivos principales" data-objectives>
+      <button class="objective-card" type="button">
+        <span class="objective-icon">
+          <span class="material-symbols-outlined" aria-hidden="true">restaurant</span>
+        </span>
+        <span class="objective-title">Comer m&aacute;s saludable</span>
+        <span class="objective-copy">Enf&oacute;cate en ingredientes frescos y nutritivos.</span>
+      </button>
+
+      <button class="objective-card" type="button">
+        <span class="objective-icon">
+          <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+        </span>
+        <span class="objective-title">Ahorrar tiempo</span>
+        <span class="objective-copy">Recetas r&aacute;pidas y planificaci&oacute;n eficiente.</span>
+      </button>
+
+      <button class="objective-card" type="button">
+        <span class="objective-icon">
+          <span class="material-symbols-outlined" aria-hidden="true">set_meal</span>
+        </span>
+        <span class="objective-title">Variar mis comidas</span>
+        <span class="objective-copy">Descubre nuevos sabores cada semana.</span>
+      </button>
+
+      <button class="objective-card" type="button">
+        <span class="objective-icon">
+          <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
+        </span>
+        <span class="objective-title">Comer mejor por la noche</span>
+        <span class="objective-copy">Cenas ligeras para un mejor descanso.</span>
+      </button>
+
+      <button class="objective-card" type="button">
+        <span class="objective-icon">
+          <span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span>
+        </span>
+        <span class="objective-title">Organizar mis compras</span>
+        <span class="objective-copy">Listas inteligentes para evitar desperdicios.</span>
+      </button>
+
+      <button class="objective-card" type="button">
+        <span class="objective-icon">
+          <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+        </span>
+        <span class="objective-title">Mantener constancia</span>
+        <span class="objective-copy">H&aacute;bitos sostenibles para el largo plazo.</span>
+      </button>
+    </section>
+
+    <section class="objective-images" aria-label="Referencias visuales">
+      <figure class="objective-image-card">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN-_KVtvX6LGcZLu6UeH1JbpxwrcBUjAk-pCE4N5EicLehfvtqQbVMC9GI-NChxqGbmdCoNZUcERwBKJeRC5uGdhheC7zcrOykBmaFdUxrU0_YJZvRgwcoYCohYZp-x0Q4OJl3XF909_BTpkjnfbKIsn5sK_-dxxpd0gBPFHhkTfY6PQ1kDDE_h_rJXvUi-2K1PsibufcDOlfYRLjo4u9b-AMPXlwvWwatTWZ4wFiF3HoySpdvrq8okg"
+          alt="Verduras frescas iluminadas con luz natural."
+        >
+      </figure>
+
+      <figure class="objective-image-card objective-image-card-secondary">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXdNGBxMv1ckiqYBNIOfGbG17FytEpdt-zg7sFlYv3fX6T1LMnupvizy4OBicq0N47uPgjbrLLfPiFWPvSeperhP0YWFKX0VZz_V4rqkCVRBBbk7t-6n2Gca6487pVPYDX1A9NM54_otgNAvnPKpRPWXL-kvi9nGZd8I6xZU4CpTsM2FS-YaVdeTjSV-iopLgNtkWRl-njMlOo-Zv3CMIJ40eGvSxn6ztKtUzHdMqB3bkrxVom-B5Bag"
+          alt="Mesa de cocina organizada con frascos, hierbas y una app de planificaci&oacute;n."
+        >
+      </figure>
+    </section>
+
+    <div class="continue-area">
+      <button class="continue-button" type="button" data-next-screen="./dashboard.html">
+        Continuar
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+      </button>
+    </div>
+  </main>
+
+  <script src="./scripts/objetivos.js"></script>
+</body>
+</html>

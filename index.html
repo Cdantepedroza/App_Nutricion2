@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriRutina - Iniciar sesi&oacute;n</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body class="login-page">
+  <div class="login-background" aria-hidden="true">
+    <span></span>
+    <span></span>
+  </div>
+
+  <main class="login-shell" aria-labelledby="login-title">
+    <section class="login-brand">
+      <div class="login-logo" aria-hidden="true">
+        <span class="material-symbols-outlined">restaurant</span>
+      </div>
+      <p>NutriRutina</p>
+      <h1 id="login-title">Comer saludable tambi&eacute;n puede ser r&aacute;pido.</h1>
+      <span>Una alimentaci&oacute;n saludable adaptada a tu vida real.</span>
+    </section>
+
+    <form class="login-card" data-login-form>
+      <label>
+        Correo
+        <input type="email" name="email" placeholder="mayra@email.com" autocomplete="email">
+      </label>
+
+      <label>
+        Contrase&ntilde;a
+        <input type="password" name="password" placeholder="********" autocomplete="current-password">
+      </label>
+
+      <button class="login-button" type="submit">
+        Iniciar sesi&oacute;n
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+      </button>
+
+      <a class="guest-link" href="./bienvenida.html">Continuar como invitada</a>
+    </form>
+
+    <p class="login-footnote">Si est&aacute;s cansada, igual puedes cuidarte. La app te propone opciones simples para hoy.</p>
+  </main>
+
+  <script src="./scripts/login.js"></script>
+</body>
+</html>

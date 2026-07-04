@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriRutina - Plan semanal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/plan-semanal.css">
+</head>
+<body class="weekly-plan-page">
+  <header class="weekly-header">
+    <div class="weekly-title-group">
+      <div class="weekly-avatar">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrvaJQd6wF-w4Ohzug6sk7OCGrDUDloHuWpNyPwsojXfEs0S2s2_OyTPekHoW2UesHZJKcwnjFT0Uz1T7QnfGl-V0eNnwmKSum36Hyeg1kiC_rEpf6mdQE0SRn_E60oicUDNifvuj3SMter9libZ0HqZ5YRvyRzAArFJ3JpKLkTSYvxrb7Dn32vi8tOrFMdfwpJoqHbdgQCj8JbiqfwnHulLIm6ZXV2qaif1Y__jtL-wvub2FdD3eaag"
+          alt="Foto de perfil."
+        >
+      </div>
+      <h1>Plan semanal</h1>
+    </div>
+
+    <button class="weekly-notification" type="button" aria-label="Ver notificaciones">
+      <span class="material-symbols-outlined" aria-hidden="true">notifications</span>
+    </button>
+  </header>
+
+  <main class="weekly-content">
+    <nav class="plan-tabs" aria-label="Vista del plan">
+      <a class="plan-tab" href="./dashboard.html">
+        <span class="material-symbols-outlined" aria-hidden="true">today</span>
+        Diario
+      </a>
+      <a class="plan-tab is-active" href="./plan-semanal.html">
+        <span class="material-symbols-outlined" aria-hidden="true">date_range</span>
+        Semanal
+      </a>
+      <a class="plan-tab" href="./plan-semanal.html">
+        <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+        Mensual
+      </a>
+    </nav>
+
+    <section class="week-strip" aria-label="D&iacute;as de la semana" data-week-days>
+      <button class="day-card is-selected" type="button">
+        <span>LUN</span>
+        <strong>12</strong>
+      </button>
+      <button class="day-card" type="button">
+        <span>MAR</span>
+        <strong>13</strong>
+      </button>
+      <button class="day-card" type="button">
+        <span>MI&Eacute;</span>
+        <strong>14</strong>
+      </button>
+      <button class="day-card" type="button">
+        <span>JUE</span>
+        <strong>15</strong>
+      </button>
+      <button class="day-card" type="button">
+        <span>VIE</span>
+        <strong>16</strong>
+      </button>
+      <button class="day-card" type="button">
+        <span>S&Aacute;B</span>
+        <strong>17</strong>
+      </button>
+    </section>
+
+    <button class="generate-plan-button" type="button" data-pressable>
+      <span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+      Generar plan r&aacute;pido
+    </button>
+
+    <section class="weekly-guidance">
+      <span class="material-symbols-outlined" aria-hidden="true">tips_and_updates</span>
+      <p>Cada comida organizada cuenta. Puedes cambiar cualquier opci&oacute;n si tu d&iacute;a cambia.</p>
+    </section>
+
+    <section class="meal-plan-list" aria-label="Comidas planificadas">
+      <article class="weekly-meal-card">
+        <div class="meal-plan-header">
+          <div>
+            <span class="material-symbols-outlined" aria-hidden="true">breakfast_dining</span>
+            <h2>Desayuno</h2>
+          </div>
+          <time>08:30 AM</time>
+        </div>
+
+        <div class="meal-plan-body">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2qMdX86EYcDUXk90JFPs7yNx56rf0-Lis1Clkn3_Mi4UkZT4NDvSjJf4JE5rVsk5IV0a3PDwkffl7Z7Uezi8mEf5vsyYtsq_CxAjYhXUfAkZd-Cet2vHKQ6viLSeUIbBGyxXiKnr0B53-yK_HexVjG_zyBW1FG2Cy5okxK6KYkm-Np7PHcKFK7uQ2Mezz1qtwayO7XfeHK3SSxQK9SkDjd_AVj7wrCzb0mtVUsApS-bUvBx8GjqbmKQ"
+            alt="Yogur griego con nueces, ar&aacute;ndanos y miel."
+          >
+          <div>
+            <h3>Yogur griego con nueces</h3>
+            <p>320 kcal &bull; 15g Prote&iacute;na</p>
+            <span>Alto prote&iacute;na</span>
+          </div>
+        </div>
+
+        <div class="meal-actions">
+          <button type="button"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Ver receta</button>
+          <button type="button"><span class="material-symbols-outlined" aria-hidden="true">sync</span>Cambiar</button>
+          <button type="button" data-next-screen="./lista-compras.html"><span class="material-symbols-outlined" aria-hidden="true">add_shopping_cart</span>Comprar</button>
+        </div>
+      </article>
+
+      <article class="weekly-meal-card">
+        <div class="meal-plan-header">
+          <div>
+            <span class="material-symbols-outlined" aria-hidden="true">lunch_dining</span>
+            <h2>Almuerzo</h2>
+          </div>
+          <time>01:30 PM</time>
+        </div>
+
+        <div class="meal-plan-body">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7MEkwqCuqhDBCoo-Tq95UNmVQg3zxrseUSvh0jIpA98BHSeHtB_zpQfEEWsmC7q_zIDTmmZ2BuGAwPYQIxqAYzCzW6238uCJdKGl90UK9BxtguNiTLcwg-r8jn28YlMfaPma2OmurUAggv78Pj4jTnp7HMqJZFw_LIJAUSGp2bBBTI82Gd2BOzAfAuVGT_fxNcY-uUXXIGdmUw00Nn7J1rIUiB9pz_g-jUt8FxrP1gPD1Ii8gaqpKfQ"
+            alt="Salm&oacute;n con esp&aacute;rragos y quinua."
+          >
+          <div>
+            <h3>Salm&oacute;n con esp&aacute;rragos</h3>
+            <p>540 kcal &bull; 38g Prote&iacute;na</p>
+            <span>Keto friendly</span>
+          </div>
+        </div>
+
+        <div class="meal-actions">
+          <button type="button"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Ver receta</button>
+          <button type="button"><span class="material-symbols-outlined" aria-hidden="true">sync</span>Cambiar</button>
+          <button type="button" data-next-screen="./lista-compras.html"><span class="material-symbols-outlined" aria-hidden="true">add_shopping_cart</span>Comprar</button>
+        </div>
+      </article>
+
+      <article class="empty-dinner-card">
+        <div>
+          <span class="material-symbols-outlined" aria-hidden="true">dinner_dining</span>
+          <h2>Cena</h2>
+        </div>
+        <a href="./modo-cansancio.html">
+          <span class="material-symbols-outlined" aria-hidden="true">add_circle</span>
+          Planificar cena
+        </a>
+      </article>
+    </section>
+
+    <section class="nutrition-summary" aria-labelledby="nutrition-title">
+      <h2 id="nutrition-title">Resumen nutricional</h2>
+      <div class="calories-row">
+        <span>Calor&iacute;as diarias (promedio)</span>
+        <strong>1,850 / 2,100 kcal</strong>
+      </div>
+      <div class="progress-bar" aria-hidden="true">
+        <span style="width: 88%;"></span>
+      </div>
+      <div class="macro-grid">
+        <div>
+          <span>Carbs</span>
+          <strong>142g</strong>
+        </div>
+        <div>
+          <span>Prote&iacute;na</span>
+          <strong>98g</strong>
+        </div>
+        <div>
+          <span>Grasas</span>
+          <strong>54g</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-bottom-nav data-active="plan"></div>
+  <script src="./scripts/bottom-nav.js"></script>
+  <script src="./scripts/plan-semanal.js"></script>
+</body>
+</html>

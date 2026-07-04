@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NutriRutina - Lista de compras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/lista-compras.css">
+</head>
+<body class="shopping-page">
+  <header class="shopping-header">
+    <div class="shopping-title-group">
+      <div class="shopping-avatar">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP-KxHgtLc1EhGB73T6J8D3XNGpeqkFSID5SmTpojGBOuD7HfN_v6RrqCjA1TGx-4becuB1E_wDL6nNd7g0ebRuhGr2gVO-4gMJTxLC_WeemJvysVjrveYLcGweQMrujVpMf6hy09utrSznqlHslUKAj6WOMBVHhLytFeId0V025vixqoSA6nMJC0SJ1zIc_RJlCMjAz7au2fvRm4nkS2baMm1LQ2_zKaN2d7-61iRSgMyhJPFTGk7pQ"
+          alt="Foto de perfil."
+        >
+      </div>
+      <h1>Lista de compras</h1>
+    </div>
+
+    <button class="shopping-notification" type="button" aria-label="Ver notificaciones">
+      <span class="material-symbols-outlined" aria-hidden="true">notifications</span>
+    </button>
+  </header>
+
+  <main class="shopping-content">
+    <section class="shopping-filters" aria-label="Filtros de compra" data-shopping-filters>
+      <button class="shopping-filter is-active" type="button">
+        <span class="material-symbols-outlined" aria-hidden="true">payments</span>
+        Econ&oacute;mico
+      </button>
+      <button class="shopping-filter" type="button">
+        <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+        R&aacute;pido
+      </button>
+      <button class="shopping-filter" type="button">
+        <span class="material-symbols-outlined" aria-hidden="true">storefront</span>
+        Mercado
+      </button>
+      <button class="shopping-filter" type="button">
+        <span class="material-symbols-outlined" aria-hidden="true">savings</span>
+        Bajo presupuesto
+      </button>
+    </section>
+
+    <button class="add-product-button" type="button">
+      <span>
+        <span class="add-product-icon">
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </span>
+        Agregar producto
+      </span>
+      <em>Escribe aqu&iacute;...</em>
+    </button>
+
+    <section class="shopping-categories" aria-label="Categor&iacute;as de compras">
+      <article class="shopping-category">
+        <button class="category-trigger is-highlighted" type="button" aria-expanded="true" aria-controls="cat-verduras" data-category-trigger>
+          <span class="category-title">
+            <span class="material-symbols-outlined" aria-hidden="true">eco</span>
+            Verduras
+            <strong>4 items</strong>
+          </span>
+          <span class="material-symbols-outlined category-chevron" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="category-content is-open" id="cat-verduras">
+          <label class="shopping-item">
+            <span><input type="checkbox"> Espinacas baby</span>
+            <small>250g</small>
+          </label>
+          <label class="shopping-item">
+            <span><input type="checkbox"> Zanahorias</span>
+            <small>1 kg</small>
+          </label>
+          <label class="shopping-item">
+            <span><input type="checkbox"> Br&oacute;coli</span>
+            <small>2 unidades</small>
+          </label>
+        </div>
+      </article>
+
+      <article class="shopping-category">
+        <button class="category-trigger is-highlighted" type="button" aria-expanded="false" aria-controls="cat-frutas" data-category-trigger>
+          <span class="category-title">
+            <span class="material-symbols-outlined" aria-hidden="true">nutrition</span>
+            Frutas
+            <strong>2 items</strong>
+          </span>
+          <span class="material-symbols-outlined category-chevron" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="category-content" id="cat-frutas">
+          <label class="shopping-item">
+            <span><input type="checkbox"> Ar&aacute;ndanos</span>
+            <small>125g</small>
+          </label>
+        </div>
+      </article>
+
+      <article class="shopping-category">
+        <button class="category-trigger" type="button" aria-expanded="false" aria-controls="cat-proteinas" data-category-trigger>
+          <span class="category-title">
+            <span class="material-symbols-outlined" aria-hidden="true">egg_alt</span>
+            Prote&iacute;nas
+          </span>
+          <span class="material-symbols-outlined category-chevron" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="category-content" id="cat-proteinas">
+          <label class="shopping-item">
+            <span><input type="checkbox" checked> Pechuga de pollo</span>
+            <small>500g</small>
+          </label>
+        </div>
+      </article>
+
+      <article class="shopping-category">
+        <button class="category-trigger" type="button" aria-expanded="false" aria-controls="cat-cereales" data-category-trigger>
+          <span class="category-title">
+            <span class="material-symbols-outlined" aria-hidden="true">bakery_dining</span>
+            Cereales
+          </span>
+          <span class="material-symbols-outlined category-chevron" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="category-content" id="cat-cereales">
+          <p class="empty-category">Sin items pendientes</p>
+        </div>
+      </article>
+
+      <article class="shopping-category">
+        <button class="category-trigger" type="button" aria-expanded="false" aria-controls="cat-snacks" data-category-trigger>
+          <span class="category-title">
+            <span class="material-symbols-outlined" aria-hidden="true">cookie</span>
+            Snacks
+          </span>
+          <span class="material-symbols-outlined category-chevron" aria-hidden="true">expand_more</span>
+        </button>
+        <div class="category-content" id="cat-snacks">
+          <label class="shopping-item">
+            <span><input type="checkbox"> Almendras</span>
+            <small>Pack ahorro</small>
+          </label>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <section class="shopping-summary" aria-label="Resumen semanal">
+    <div>
+      <span>Resumen semanal</span>
+      <p>Esta lista cubre 4 comidas planificadas.</p>
+    </div>
+    <div class="summary-progress" aria-label="65 por ciento completado">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <strong>65%</strong>
+    </div>
+  </section>
+  <div data-bottom-nav data-active="compras"></div>
+  <script src="./scripts/bottom-nav.js"></script>
+  <script src="./scripts/lista-compras.js"></script>
+</body>
+</html>
