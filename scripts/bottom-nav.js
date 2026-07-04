@@ -37,6 +37,7 @@ bottomNavMounts.forEach((mount) => {
   const activeItem = mount.dataset.active || "inicio";
 
   document.body.classList.add("has-bottom-nav");
+  mount.closest(".prototype-shell")?.classList.add("has-bottom-nav");
 
   mount.innerHTML = `
     <nav class="app-bottom-nav" aria-label="Navegaci&oacute;n principal">

@@ -32,6 +32,8 @@
   --radius-xl: 12px;
   --shadow-soft: 0 10px 40px rgba(95, 141, 126, 0.15);
   --bottom-nav-height: 76px;
+  --prototype-mobile-width: 430px;
+  --prototype-mobile-height: min(812px, calc(100dvh - 48px));
 }
 
 * {
@@ -67,6 +69,162 @@ a {
 
 body.has-bottom-nav {
   padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom) + 28px) !important;
+}
+
+body.shopping-page.has-bottom-nav {
+  padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom) + 124px) !important;
+}
+
+body.prototype-shell-enabled {
+  display: flex;
+  min-height: 100dvh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 !important;
+  background: var(--color-background);
+}
+
+.prototype-shell {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  min-height: 0 !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: var(--color-background);
+  transform: translateZ(0);
+}
+
+.prototype-scroll {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: inherit;
+  scrollbar-width: thin;
+}
+
+.prototype-shell.screen,
+.prototype-shell.flow-page,
+.prototype-shell.objectives-page,
+.prototype-shell.dashboard-page,
+.prototype-shell.recommendation-page,
+.prototype-shell.weekly-plan-page,
+.prototype-shell.fatigue-page,
+.prototype-shell.shopping-page,
+.prototype-shell.progress-page,
+.prototype-shell.profile-page,
+.prototype-shell.login-page {
+  min-height: 0 !important;
+}
+
+.prototype-shell.has-bottom-nav,
+.prototype-shell.dashboard-page,
+.prototype-shell.weekly-plan-page,
+.prototype-shell.fatigue-page,
+.prototype-shell.progress-page,
+.prototype-shell.profile-page,
+.prototype-shell.recommendation-page {
+  padding-bottom: 0 !important;
+}
+
+.prototype-shell.has-bottom-nav .prototype-scroll,
+.prototype-shell.dashboard-page .prototype-scroll,
+.prototype-shell.weekly-plan-page .prototype-scroll,
+.prototype-shell.fatigue-page .prototype-scroll,
+.prototype-shell.progress-page .prototype-scroll,
+.prototype-shell.profile-page .prototype-scroll,
+.prototype-shell.recommendation-page .prototype-scroll {
+  padding-bottom: calc(var(--bottom-nav-height) + 32px) !important;
+}
+
+.prototype-shell.shopping-page {
+  padding-bottom: 0 !important;
+}
+
+.prototype-shell.shopping-page .prototype-scroll {
+  padding-bottom: calc(var(--bottom-nav-height) + 152px) !important;
+}
+
+.prototype-shell.flow-page {
+  padding-bottom: 0 !important;
+}
+
+.prototype-shell.flow-page .prototype-scroll {
+  padding-bottom: 112px !important;
+}
+
+.prototype-shell .app-bottom-nav,
+.prototype-shell .bottom-action {
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  transform: none !important;
+}
+
+.prototype-shell .app-bottom-nav {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.prototype-shell .app-bottom-nav__inner {
+  max-width: 100% !important;
+}
+
+.prototype-shell .recommendation-header {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  transform: none !important;
+}
+
+.prototype-shell .shopping-summary {
+  position: absolute !important;
+  right: 20px !important;
+  bottom: var(--bottom-nav-height) !important;
+  left: 20px !important;
+  width: calc(100% - 40px) !important;
+  max-width: calc(100% - 40px) !important;
+  transform: none !important;
+}
+
+.prototype-shell .background-shapes,
+.prototype-shell .login-background,
+.prototype-shell .mesh-background {
+  right: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  transform: none !important;
+}
+
+.prototype-shell .objectives-content {
+  min-height: 100% !important;
+  justify-content: flex-start !important;
+}
+
+.prototype-shell .objectives-grid,
+.prototype-shell .objective-images,
+.prototype-shell .time-grid,
+.prototype-shell .profile-grid,
+.prototype-shell .energy-list {
+  grid-template-columns: 1fr !important;
+}
+
+.prototype-shell .objective-image-card-secondary {
+  display: none !important;
+}
+
+.prototype-shell .objective-card {
+  min-height: auto !important;
 }
 
 .screen {
@@ -176,6 +334,169 @@ body.has-bottom-nav {
 
   .app-bottom-nav__item {
     font-size: 10px;
+  }
+}
+
+@media (min-width: 520px) {
+  html {
+    height: 100dvh;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  body.prototype-shell-enabled {
+    padding: 24px !important;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(95, 141, 126, 0.12), transparent 32%),
+      radial-gradient(circle at 90% 80%, rgba(242, 169, 126, 0.14), transparent 36%),
+      #ebe6df;
+  }
+
+  .prototype-shell {
+    width: min(var(--prototype-mobile-width), 100vw);
+    height: var(--prototype-mobile-height);
+    box-shadow: 0 0 0 1px rgba(47, 62, 58, 0.08), 0 24px 80px rgba(47, 62, 58, 0.22);
+  }
+
+  body.prototype-shell-enabled.has-bottom-nav,
+  body.prototype-shell-enabled.shopping-page.has-bottom-nav {
+    padding-bottom: 24px !important;
+  }
+
+  .prototype-shell.has-bottom-nav,
+  .prototype-shell.dashboard-page,
+  .prototype-shell.weekly-plan-page,
+  .prototype-shell.fatigue-page,
+  .prototype-shell.progress-page,
+  .prototype-shell.profile-page,
+  .prototype-shell.recommendation-page {
+    padding-bottom: 0 !important;
+  }
+
+  .prototype-shell.has-bottom-nav .prototype-scroll,
+  .prototype-shell.dashboard-page .prototype-scroll,
+  .prototype-shell.weekly-plan-page .prototype-scroll,
+  .prototype-shell.fatigue-page .prototype-scroll,
+  .prototype-shell.progress-page .prototype-scroll,
+  .prototype-shell.profile-page .prototype-scroll,
+  .prototype-shell.recommendation-page .prototype-scroll {
+    padding-bottom: calc(var(--bottom-nav-height) + 32px) !important;
+  }
+
+  .prototype-shell.shopping-page {
+    padding-bottom: 0 !important;
+  }
+
+  .prototype-shell.shopping-page .prototype-scroll {
+    padding-bottom: calc(var(--bottom-nav-height) + 152px) !important;
+  }
+
+  .prototype-shell.flow-page {
+    padding-bottom: 0 !important;
+  }
+
+  .prototype-shell.flow-page .prototype-scroll {
+    padding-bottom: 112px !important;
+  }
+
+  .prototype-shell .app-bottom-nav,
+  .prototype-shell .bottom-action {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+  }
+
+  .prototype-shell .app-bottom-nav {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .prototype-shell .app-bottom-nav__inner {
+    max-width: 100% !important;
+  }
+
+  .prototype-shell .recommendation-header {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+  }
+
+  .prototype-shell .shopping-summary {
+    position: absolute !important;
+    right: 20px !important;
+    bottom: var(--bottom-nav-height) !important;
+    left: 20px !important;
+    width: calc(100% - 40px) !important;
+    max-width: calc(100% - 40px) !important;
+    transform: none !important;
+  }
+
+  .prototype-shell .background-shapes,
+  .prototype-shell .login-background,
+  .prototype-shell .mesh-background {
+    position: absolute !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+  }
+
+  .screen,
+  .flow-page,
+  .objectives-page,
+  .dashboard-page,
+  .recommendation-page,
+  .weekly-plan-page,
+  .fatigue-page,
+  .shopping-page,
+  .progress-page,
+  .profile-page,
+  .login-page {
+    min-height: 100% !important;
+  }
+
+  .objectives-content {
+    min-height: 100% !important;
+    justify-content: flex-start !important;
+  }
+
+  .objectives-grid,
+  .objective-images,
+  .time-grid,
+  .profile-grid,
+  .energy-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  .objective-image-card-secondary {
+    display: none !important;
+  }
+
+  .objectives-header h1,
+  .intro-section h1,
+  .profile-header h1,
+  .weekly-title-group h1,
+  .profile-greeting h1 {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
+
+  .objective-card {
+    min-height: auto !important;
+  }
+
+  .objective-images,
+  .continue-area {
+    margin-top: var(--space-lg) !important;
   }
 }
 
