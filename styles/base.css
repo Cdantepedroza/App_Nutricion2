@@ -19,6 +19,10 @@
   --color-neutral-light: #e6ece8;
   --color-selected-light: #eef6f1;
   --color-soft-bg: #eef6f1;
+  --color-ink: #24332f;
+  --color-leaf-dark: #486f63;
+  --color-citrus-soft: #f6c49b;
+  --color-sage-paper: #f0f4e8;
   --font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --space-xs: 4px;
   --space-base: 8px;
@@ -47,7 +51,10 @@ html {
 body {
   min-height: 100dvh;
   margin: 0;
-  background: var(--color-background);
+  background:
+    linear-gradient(135deg, rgba(95, 141, 126, 0.06), transparent 34%),
+    linear-gradient(315deg, rgba(242, 169, 126, 0.08), transparent 38%),
+    var(--color-background);
   color: var(--color-on-background);
   font-family: var(--font-family);
   -webkit-tap-highlight-color: transparent;
@@ -116,7 +123,10 @@ body.prototype-shell-enabled {
   min-height: 0 !important;
   overflow-x: hidden;
   overflow-y: hidden;
-  background: var(--color-background);
+  background:
+    linear-gradient(rgba(250, 247, 240, 0.94), rgba(250, 247, 240, 0.94)),
+    repeating-linear-gradient(0deg, rgba(95, 141, 126, 0.035) 0 1px, transparent 1px 18px),
+    var(--color-background);
   transform: translateZ(0);
 }
 
@@ -295,9 +305,11 @@ body.prototype-shell-enabled {
   align-items: center;
   gap: var(--space-base);
   padding: 10px 12px;
-  border: 1px solid rgba(95, 141, 126, 0.14);
+  border: 1px solid rgba(95, 141, 126, 0.18);
   border-radius: var(--radius-xl);
-  background: var(--color-soft-bg);
+  background:
+    linear-gradient(90deg, rgba(95, 141, 126, 0.1), rgba(255, 255, 255, 0.72)),
+    var(--color-soft-bg);
   color: #4a6e62;
   text-align: left;
 }
@@ -312,6 +324,136 @@ body.prototype-shell-enabled {
   font-size: 12px;
   font-weight: 700;
   line-height: 18px;
+}
+
+.dashboard-header,
+.weekly-header,
+.shopping-header,
+.progress-header,
+.profile-header {
+  min-height: 72px;
+  padding: 14px var(--space-margin-mobile) !important;
+}
+
+.profile-greeting,
+.weekly-title-group,
+.shopping-title-group,
+.progress-title-group,
+.profile-heading {
+  min-width: 0;
+  gap: var(--space-sm);
+}
+
+.avatar,
+.weekly-avatar,
+.shopping-avatar,
+.progress-avatar,
+.profile-avatar {
+  width: 44px !important;
+  height: 44px !important;
+  flex: 0 0 44px !important;
+  border: 2px solid rgba(95, 141, 126, 0.72) !important;
+  border-radius: 999px;
+  box-shadow: 0 3px 10px rgba(47, 62, 58, 0.08);
+}
+
+.profile-greeting h1,
+.weekly-title-group h1,
+.shopping-title-group h1,
+.progress-title-group h1,
+.profile-heading h1 {
+  margin: 0;
+  color: var(--color-on-background) !important;
+  font-size: 26px !important;
+  font-weight: 700;
+  line-height: 32px !important;
+}
+
+.notification-button,
+.weekly-notification,
+.shopping-notification,
+.progress-notification,
+.profile-settings {
+  display: inline-grid !important;
+  width: 40px !important;
+  height: 40px !important;
+  flex: 0 0 40px !important;
+  place-items: center;
+  border: 1px solid rgba(216, 226, 220, 0.72) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: var(--color-on-surface) !important;
+  box-shadow: 0 3px 10px rgba(47, 62, 58, 0.08) !important;
+}
+
+.notification-button .material-symbols-outlined,
+.weekly-notification .material-symbols-outlined,
+.shopping-notification .material-symbols-outlined,
+.progress-notification .material-symbols-outlined,
+.profile-settings .material-symbols-outlined {
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
+}
+
+.period-tabs,
+.plan-tabs {
+  min-height: 48px;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
+  border-radius: var(--radius-xl);
+  background: rgba(244, 235, 221, 0.58) !important;
+}
+
+.period-tab,
+.plan-tab {
+  min-height: 40px;
+  border-radius: var(--radius-lg);
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+}
+
+.plan-tab .material-symbols-outlined {
+  width: 18px;
+  height: 18px;
+  font-size: 18px !important;
+}
+
+.quick-icon {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 14px !important;
+}
+
+.quick-icon .material-symbols-outlined {
+  font-size: 26px !important;
+}
+
+.day-card {
+  min-width: 56px !important;
+  padding: 12px 0 !important;
+  border-radius: 14px !important;
+}
+
+.day-card span {
+  font-size: 11px !important;
+  line-height: 14px !important;
+}
+
+.day-card strong {
+  font-size: 20px !important;
+  line-height: 26px !important;
+}
+
+.generate-plan-button {
+  min-height: 54px !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+}
+
+.generate-plan-button .material-symbols-outlined {
+  font-size: 22px !important;
 }
 
 .summary-card,
@@ -339,6 +481,35 @@ body.prototype-shell-enabled {
 .progress-card,
 .profile-card {
   box-shadow: 0 8px 24px rgba(47, 62, 58, 0.07) !important;
+}
+
+.summary-card,
+.meal-card,
+.weekly-meal-card,
+.shopping-category,
+.progress-card,
+.profile-card,
+.recipe-card,
+.alternative-card {
+  position: relative;
+}
+
+.summary-card::before,
+.meal-card::before,
+.weekly-meal-card::before,
+.shopping-category::before,
+.progress-card::before,
+.profile-card::before,
+.recipe-card::before {
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 0;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(var(--color-primary), rgba(242, 169, 126, 0.72));
+  content: "";
+  opacity: 0.55;
 }
 
 .meal-card:active,

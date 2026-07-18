@@ -128,6 +128,72 @@
   margin: calc(var(--space-md) * -0.35) 0 var(--space-md);
 }
 
+.ritual-card {
+  margin: 0 0 var(--space-md);
+  padding: var(--space-gutter);
+  border: 1px solid rgba(95, 141, 126, 0.16);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(240, 244, 232, 0.88)),
+    var(--color-surface);
+  box-shadow: 0 8px 24px rgba(47, 62, 58, 0.07);
+}
+
+.ritual-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-gutter);
+  margin-bottom: var(--space-sm);
+}
+
+.ritual-card__header span {
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.ritual-card__header strong {
+  color: rgba(47, 62, 58, 0.72);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.ritual-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-base);
+}
+
+.ritual-steps span {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 6px;
+  border-radius: 999px;
+  background: rgba(95, 141, 126, 0.09);
+  color: var(--color-leaf-dark);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+.ritual-steps i {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-radius: 999px;
+  background: var(--color-secondary);
+}
+
 .period-tab {
   flex: 1;
   min-height: 40px;

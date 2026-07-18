@@ -34,6 +34,20 @@
       <strong>Comprar con intenci&oacute;n hace m&aacute;s f&aacute;cil comer mejor.</strong>
     </section>
 
+    <section class="shopping-overview" aria-label="Resumen semanal">
+      <div>
+        <span>Lista semanal</span>
+        <h2>4 comidas cubiertas</h2>
+        <p>Tu lista reduce decisiones cuando est&aacute;s cansada.</p>
+      </div>
+      <div class="summary-progress" aria-label="65 por ciento completado">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <strong>65%</strong>
+      </div>
+    </section>
+
     <section class="shopping-filters" aria-label="Filtros de compra" data-shopping-filters>
       <button class="shopping-filter is-active" type="button">
         <span class="material-symbols-outlined" aria-hidden="true">payments</span>
@@ -63,13 +77,21 @@
       <em>Escribe aqu&iacute;...</em>
     </button>
 
+    <div class="shopping-section-heading">
+      <div>
+        <span>Categor&iacute;as</span>
+        <h2>Compra por bloques</h2>
+      </div>
+      <p>5 pendientes</p>
+    </div>
+
     <section class="shopping-categories" aria-label="Categor&iacute;as de compras">
       <article class="shopping-category">
         <button class="category-trigger is-highlighted" type="button" aria-expanded="true" aria-controls="cat-verduras" data-category-trigger>
           <span class="category-title">
             <span class="material-symbols-outlined" aria-hidden="true">eco</span>
             Verduras
-            <strong>4 items</strong>
+            <strong>3 items</strong>
           </span>
           <span class="material-symbols-outlined category-chevron" aria-hidden="true">expand_more</span>
         </button>
@@ -94,7 +116,7 @@
           <span class="category-title">
             <span class="material-symbols-outlined" aria-hidden="true">nutrition</span>
             Frutas
-            <strong>2 items</strong>
+            <strong>1 item</strong>
           </span>
           <span class="material-symbols-outlined category-chevron" aria-hidden="true">expand_more</span>
         </button>
@@ -111,6 +133,7 @@
           <span class="category-title">
             <span class="material-symbols-outlined" aria-hidden="true">egg_alt</span>
             Prote&iacute;nas
+            <strong>1 listo</strong>
           </span>
           <span class="material-symbols-outlined category-chevron" aria-hidden="true">expand_more</span>
         </button>
@@ -140,6 +163,7 @@
           <span class="category-title">
             <span class="material-symbols-outlined" aria-hidden="true">cookie</span>
             Snacks
+            <strong>1 item</strong>
           </span>
           <span class="material-symbols-outlined category-chevron" aria-hidden="true">expand_more</span>
         </button>
@@ -152,19 +176,6 @@
       </article>
     </section>
   </main>
-
-  <section class="shopping-summary" aria-label="Resumen semanal">
-    <div>
-      <span>Resumen semanal</span>
-      <p>Esta lista cubre 4 comidas planificadas.</p>
-    </div>
-    <div class="summary-progress" aria-label="65 por ciento completado">
-      <svg viewBox="0 0 48 48" aria-hidden="true">
-        <circle cx="24" cy="24" r="20"></circle>
-      </svg>
-      <strong>65%</strong>
-    </div>
-  </section>
   <div data-bottom-nav data-active="compras"></div>
   <script src="./scripts/prototype-shell.js"></script>
   <script src="./scripts/bottom-nav.js"></script>
