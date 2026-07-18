@@ -19,6 +19,7 @@ if (!document.querySelector(".prototype-shell")) {
   const fixedSelectors = [
     "[data-bottom-nav]",
     ".bottom-action",
+    ".ai-bottom-action",
     ".shopping-summary",
     ".recommendation-header",
   ];

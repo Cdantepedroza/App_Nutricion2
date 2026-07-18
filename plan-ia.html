@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NutriRutina - Plan con IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/plan-ia.css">
+</head>
+<body class="ai-plan-page">
+  <header class="ai-header">
+    <button class="back-button" type="button" data-next-screen="./plan-semanal.html" aria-label="Volver al plan semanal">
+      <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+    </button>
+    <div>
+      <span>Asistente IA</span>
+      <h1>Generar plan</h1>
+    </div>
+    <button class="ai-help" type="button" data-toast="La IA adapta opciones usando tu rutina, energia y tiempo disponible." aria-label="Ver ayuda">
+      <span class="material-symbols-outlined" aria-hidden="true">info</span>
+    </button>
+  </header>
+
+  <main class="ai-content">
+    <section class="ai-hero" aria-label="Resumen del plan inteligente">
+      <div class="ai-copy">
+        <span class="eyebrow">Plan posible, no perfecto</span>
+        <h2>Tu semana se est&aacute; armando alrededor de tu energ&iacute;a real.</h2>
+        <p id="ai-summary">Priorizando recetas r&aacute;pidas, compras simples y alternativas para d&iacute;as cansados.</p>
+        <div class="ai-status-pills" aria-label="Estado de generacion">
+          <span>3 objetivos</span>
+          <span>10-20 min</span>
+          <span>modo realista</span>
+        </div>
+      </div>
+      <div class="ai-orbit" aria-hidden="true">
+        <span class="material-symbols-outlined">auto_awesome</span>
+      </div>
+    </section>
+
+    <section class="generation-card" aria-label="Estado de generacion del plan">
+      <div class="generation-top">
+        <span class="material-symbols-outlined" aria-hidden="true">neurology</span>
+        <div>
+          <strong>Analizando tu rutina</strong>
+          <p>Listo para aplicar una propuesta flexible.</p>
+        </div>
+        <em>92%</em>
+      </div>
+      <div class="generation-meter" aria-hidden="true"><span></span></div>
+    </section>
+
+    <section class="ai-inputs" aria-labelledby="ai-inputs-title">
+      <div class="section-heading">
+        <span>Lo que toma en cuenta</span>
+        <h2 id="ai-inputs-title">Tu contexto de esta semana</h2>
+      </div>
+
+      <div class="context-grid">
+        <article>
+          <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+          <strong>10-20 min</strong>
+          <p>tiempo para cocinar</p>
+        </article>
+        <article>
+          <span class="material-symbols-outlined" aria-hidden="true">bedtime</span>
+          <strong>2 d&iacute;as</strong>
+          <p>con baja energ&iacute;a</p>
+        </article>
+        <article>
+          <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
+          <strong>5</strong>
+          <p>compras pendientes</p>
+        </article>
+        <article>
+          <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+          <strong>3</strong>
+          <p>objetivos activos</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-process" aria-labelledby="ai-process-title">
+      <div class="section-heading">
+        <span>Proceso</span>
+        <h2 id="ai-process-title">Criterios de decisi&oacute;n</h2>
+      </div>
+
+      <ol class="process-list">
+        <li class="is-done">
+          <span class="material-symbols-outlined" aria-hidden="true">check</span>
+          Detecta tus comidas base y preferencias.
+        </li>
+        <li class="is-done">
+          <span class="material-symbols-outlined" aria-hidden="true">check</span>
+          Prioriza recetas r&aacute;pidas para d&iacute;as ocupados.
+        </li>
+        <li class="is-active">
+          <span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+          Equilibra variedad, energ&iacute;a y lista de compras.
+        </li>
+      </ol>
+    </section>
+
+    <section class="ai-preview" aria-labelledby="ai-preview-title">
+      <div class="section-heading">
+        <span>Resultado sugerido</span>
+        <h2 id="ai-preview-title">Tu semana ajustada</h2>
+      </div>
+
+      <div class="match-card">
+        <div>
+          <span>afinidad del plan</span>
+          <strong>88%</strong>
+        </div>
+        <p>El plan evita exigirte de m&aacute;s y deja margen para cambiar comidas si el d&iacute;a se complica.</p>
+      </div>
+
+      <article class="suggestion-card is-primary">
+        <div>
+          <span class="material-symbols-outlined" aria-hidden="true">wb_sunny</span>
+          <strong>Lunes a mi&eacute;rcoles</strong>
+          <p>Comidas completas, preparaci&oacute;n corta y una base repetible.</p>
+        </div>
+        <em>78% afinidad</em>
+      </article>
+
+      <article class="suggestion-card">
+        <div>
+          <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+          <strong>Jueves ocupado</strong>
+          <p>Opci&oacute;n r&aacute;pida: bowl listo con prote&iacute;na y vegetales.</p>
+        </div>
+        <em>15 min</em>
+      </article>
+
+      <article class="suggestion-card">
+        <div>
+          <span class="material-symbols-outlined" aria-hidden="true">nights_stay</span>
+          <strong>Viernes cansado</strong>
+          <p>Cena ligera sin cocinar: yogur, fruta y frutos secos.</p>
+        </div>
+        <em>sin culpa</em>
+      </article>
+    </section>
+
+    <section class="ai-adjustments" aria-labelledby="ai-adjust-title">
+      <div class="section-heading">
+        <span>Ajustes r&aacute;pidos</span>
+        <h2 id="ai-adjust-title">Personaliza antes de aplicar</h2>
+      </div>
+
+      <div class="adjustment-chips" role="group" aria-label="Ajustes del plan">
+        <button class="is-active" type="button" data-ai-mode="rapido">M&aacute;s r&aacute;pido</button>
+        <button type="button" data-ai-mode="economico">M&aacute;s econ&oacute;mico</button>
+        <button type="button" data-ai-mode="variedad">M&aacute;s variedad</button>
+        <button type="button" data-ai-mode="cocina">Menos cocina</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="ai-bottom-action">
+    <button class="secondary-action" type="button" data-next-screen="./plan-semanal.html">
+      Guardar borrador
+    </button>
+    <button type="button" data-next-screen="./plan-semanal.html">
+      Aplicar plan sugerido
+      <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+    </button>
+  </div>
+
+  <div data-bottom-nav data-active="plan"></div>
+  <script src="./scripts/prototype-shell.js"></script>
+  <script src="./scripts/bottom-nav.js"></script>
+  <script src="./scripts/plan-ia.js"></script>
+</body>
+</html>

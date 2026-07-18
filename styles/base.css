@@ -197,14 +197,23 @@ body.prototype-shell-enabled {
 }
 
 .prototype-shell .app-bottom-nav,
-.prototype-shell .bottom-action {
+.prototype-shell .bottom-action,
+.prototype-shell .ai-bottom-action {
   position: absolute !important;
   right: 0 !important;
-  bottom: 0 !important;
   left: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
   transform: none !important;
+}
+
+.prototype-shell .app-bottom-nav,
+.prototype-shell .bottom-action {
+  bottom: 0 !important;
+}
+
+.prototype-shell .ai-bottom-action {
+  bottom: var(--bottom-nav-height) !important;
 }
 
 .prototype-shell .app-bottom-nav {
