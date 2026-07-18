@@ -23,7 +23,7 @@
       <h1>&iexcl;Hola, Mayra!</h1>
     </div>
 
-    <button class="notification-button" type="button" aria-label="Ver notificaciones">
+    <button class="notification-button" type="button" aria-label="Ver notificaciones" data-toast="Tienes 2 recordatorios suaves para hoy.">
       <span class="material-symbols-outlined" aria-hidden="true">notifications</span>
     </button>
   </header>
@@ -32,7 +32,7 @@
     <nav class="period-tabs" aria-label="Periodo del resumen" data-period-tabs>
       <button class="period-tab is-active" type="button">Diario</button>
       <button class="period-tab" type="button" data-next-screen="./plan-semanal.html">Semanal</button>
-      <button class="period-tab" type="button">Mensual</button>
+      <button class="period-tab" type="button" data-next-screen="./progreso.html">Mensual</button>
     </nav>
 
     <section class="wellbeing-prompt">
@@ -43,8 +43,13 @@
       <a href="./modo-cansancio.html">Estoy cansada</a>
     </section>
 
+    <section class="motivation-strip dashboard-motivation" aria-label="Motivaci&oacute;n del d&iacute;a">
+      <span class="material-symbols-outlined" aria-hidden="true">wb_sunny</span>
+      <strong>Cada comida organizada cuenta, incluso si el d&iacute;a est&aacute; pesado.</strong>
+    </section>
+
     <section class="quick-menu" aria-label="Accesos r&aacute;pidos">
-      <button class="quick-item" type="button">
+      <button class="quick-item" type="button" data-next-screen="./modo-cansancio.html">
         <span class="quick-icon"><span class="material-symbols-outlined" aria-hidden="true">lightbulb</span></span>
         <span>Tips</span>
       </button>
@@ -56,7 +61,7 @@
         <span class="quick-icon"><span class="material-symbols-outlined" aria-hidden="true">calendar_today</span></span>
         <span>Plan</span>
       </button>
-      <button class="quick-item" type="button">
+      <button class="quick-item" type="button" data-next-screen="./perfil.html">
         <span class="quick-icon"><span class="material-symbols-outlined" aria-hidden="true">chat</span></span>
         <span>Chat</span>
       </button>
@@ -86,7 +91,7 @@
     <section class="meals-section" aria-labelledby="meals-title">
       <div class="section-row">
         <h2 id="meals-title">Tu alimentaci&oacute;n de hoy</h2>
-        <button class="more-button" type="button" aria-label="Ver m&aacute;s opciones">
+        <button class="more-button" type="button" aria-label="Ver m&aacute;s opciones" data-next-screen="./plan-semanal.html">
           <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
         </button>
       </div>
@@ -115,7 +120,7 @@
           <p>Almuerzo</p>
           <h3>Salm&oacute;n con quinoa</h3>
         </div>
-        <button class="pending-button" type="button">Pendiente</button>
+        <button class="pending-button" type="button" data-next-screen="./comida-recomendada.html">Pendiente</button>
       </article>
 
       <article class="featured-meal" data-next-screen="./comida-recomendada.html" tabindex="0" role="link" aria-label="Ver cena recomendada">

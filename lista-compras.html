@@ -23,12 +23,17 @@
       <h1>Lista de compras</h1>
     </div>
 
-    <button class="shopping-notification" type="button" aria-label="Ver notificaciones">
+    <button class="shopping-notification" type="button" aria-label="Ver notificaciones" data-toast="Compra por categorias para ahorrar tiempo.">
       <span class="material-symbols-outlined" aria-hidden="true">notifications</span>
     </button>
   </header>
 
   <main class="shopping-content">
+    <section class="motivation-strip shopping-motivation" aria-label="Motivaci&oacute;n de compras">
+      <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
+      <strong>Comprar con intenci&oacute;n hace m&aacute;s f&aacute;cil comer mejor.</strong>
+    </section>
+
     <section class="shopping-filters" aria-label="Filtros de compra" data-shopping-filters>
       <button class="shopping-filter is-active" type="button">
         <span class="material-symbols-outlined" aria-hidden="true">payments</span>
@@ -48,7 +53,7 @@
       </button>
     </section>
 
-    <button class="add-product-button" type="button">
+    <button class="add-product-button" type="button" data-toast="Producto agregado a la lista demo.">
       <span>
         <span class="add-product-icon">
           <span class="material-symbols-outlined" aria-hidden="true">add</span>

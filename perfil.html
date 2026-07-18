@@ -17,7 +17,7 @@
       <span>Cuenta</span>
       <h1>Perfil</h1>
     </div>
-    <button class="profile-settings" type="button" aria-label="Abrir ajustes">
+    <button class="profile-settings" type="button" aria-label="Abrir ajustes" data-toast="Ajustes del perfil demo.">
       <span class="material-symbols-outlined" aria-hidden="true">settings</span>
     </button>
   </header>
@@ -55,7 +55,7 @@
     <section class="profile-section" aria-labelledby="profile-goals">
       <div class="profile-section-title">
         <h2 id="profile-goals">Objetivos activos</h2>
-        <button type="button">Editar</button>
+        <button type="button" data-toast="Puedes ajustar objetivo, rutina y energia desde el onboarding.">Editar</button>
       </div>
       <div class="profile-chips">
         <span>Comer m&aacute;s saludable</span>
@@ -92,12 +92,12 @@
         <h2 id="profile-settings">Preferencias</h2>
       </div>
       <div class="settings-list">
-        <button type="button">
+        <button type="button" data-next-screen="./personalizar-plan.html">
           <span class="material-symbols-outlined" aria-hidden="true">restaurant_menu</span>
           Preferencias alimentarias
           <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
         </button>
-        <button type="button">
+        <button type="button" data-toast="Preferencias guardadas para la demo.">
           <span class="material-symbols-outlined" aria-hidden="true">notifications</span>
           Recordatorios positivos
           <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>

@@ -23,7 +23,7 @@
       <h1>Plan semanal</h1>
     </div>
 
-    <button class="weekly-notification" type="button" aria-label="Ver notificaciones">
+    <button class="weekly-notification" type="button" aria-label="Ver notificaciones" data-toast="Tu plan semanal esta listo para ajustar.">
       <span class="material-symbols-outlined" aria-hidden="true">notifications</span>
     </button>
   </header>
@@ -43,6 +43,11 @@
         Mensual
       </a>
     </nav>
+
+    <section class="motivation-strip weekly-motivation" aria-label="Recordatorio de constancia">
+      <span class="material-symbols-outlined" aria-hidden="true">event_available</span>
+      <strong>Planear hoy te quita carga ma&ntilde;ana.</strong>
+    </section>
 
     <section class="week-strip" aria-label="D&iacute;as de la semana" data-week-days>
       <button class="day-card is-selected" type="button">
@@ -71,7 +76,7 @@
       </button>
     </section>
 
-    <button class="generate-plan-button" type="button" data-pressable>
+    <button class="generate-plan-button" type="button" data-pressable data-toast="Plan actualizado con opciones realistas.">
       <span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>
       Generar plan r&aacute;pido
     </button>
@@ -104,8 +109,8 @@
         </div>
 
         <div class="meal-actions">
-          <button type="button"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Ver receta</button>
-          <button type="button"><span class="material-symbols-outlined" aria-hidden="true">sync</span>Cambiar</button>
+          <button type="button" data-next-screen="./comida-recomendada.html"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Ver receta</button>
+          <button type="button" data-next-screen="./modo-cansancio.html"><span class="material-symbols-outlined" aria-hidden="true">sync</span>Cambiar</button>
           <button type="button" data-next-screen="./lista-compras.html"><span class="material-symbols-outlined" aria-hidden="true">add_shopping_cart</span>Comprar</button>
         </div>
       </article>
@@ -132,8 +137,8 @@
         </div>
 
         <div class="meal-actions">
-          <button type="button"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Ver receta</button>
-          <button type="button"><span class="material-symbols-outlined" aria-hidden="true">sync</span>Cambiar</button>
+          <button type="button" data-next-screen="./comida-recomendada.html"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Ver receta</button>
+          <button type="button" data-next-screen="./modo-cansancio.html"><span class="material-symbols-outlined" aria-hidden="true">sync</span>Cambiar</button>
           <button type="button" data-next-screen="./lista-compras.html"><span class="material-symbols-outlined" aria-hidden="true">add_shopping_cart</span>Comprar</button>
         </div>
       </article>

@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 24px var(--space-margin-mobile);
+  padding: 18px var(--space-margin-mobile) 14px;
 }
 
 .icon-button,
@@ -61,7 +61,7 @@
 }
 
 .intro-section {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .intro-section h1 {
@@ -75,16 +75,16 @@
 .intro-section p {
   margin: 0;
   color: #4b5563;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
 }
 
 .resilience-note {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin: calc(var(--space-lg) * -0.5) 0 var(--space-lg);
+  margin: 0 0 var(--space-md);
   padding: var(--space-sm) var(--space-gutter);
   border: 1px solid rgba(95, 141, 126, 0.14);
   border-radius: var(--radius-xl);
@@ -101,22 +101,30 @@
 }
 
 .choice-section {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .section-heading {
   display: flex;
   align-items: center;
   gap: var(--space-base);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 .section-heading h2 {
   margin: 0;
   color: #1f2937;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 32px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.section-helper {
+  margin: -4px 0 var(--space-sm);
+  color: var(--color-on-surface-variant);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
 }
 
 .filled-icon {
@@ -129,23 +137,24 @@
 }
 
 .routine-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-base);
 }
 
 .routine-chip {
   display: inline-flex;
-  min-height: 44px;
+  min-height: 42px;
   align-items: center;
+  justify-content: center;
   gap: var(--space-base);
-  padding: 10px var(--space-md);
+  padding: 9px var(--space-sm);
   border: 1px solid transparent;
   border-radius: 999px;
   background: #f4ebdd;
   color: var(--color-on-surface-variant);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 20px;
   transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
@@ -166,16 +175,16 @@
 
 .time-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-gutter);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm);
 }
 
 .time-card {
-  display: flex;
+  display: grid;
   width: 100%;
-  flex-direction: column;
-  align-items: stretch;
-  padding: var(--space-md);
+  min-height: 132px;
+  align-content: start;
+  padding: var(--space-gutter);
   border: 1px solid var(--color-outline);
   border-radius: var(--radius-xl);
   background: var(--color-surface);
@@ -198,13 +207,13 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-base);
 }
 
 .time-icon {
   display: inline-grid;
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   place-items: center;
   border-radius: var(--radius-lg);
   background: var(--color-selected-light);
@@ -240,24 +249,24 @@
 .time-title {
   margin-bottom: var(--space-xs);
   color: #1f2937;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 20px;
 }
 
 .time-copy {
   color: #6b7280;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  line-height: 16px;
+  line-height: 15px;
 }
 
 .inspiration-panel {
   position: relative;
-  height: 192px;
+  height: 132px;
   overflow: hidden;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   border: 1px solid var(--color-outline);
   border-radius: 16px;
   background: var(--color-surface);
@@ -301,10 +310,10 @@
 
 .inspiration-overlay p {
   margin: var(--space-base) 0 0;
-  font-size: 16px;
+  font-size: 14px;
   font-style: italic;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 20px;
 }
 
 .bottom-action {
@@ -332,7 +341,7 @@
   background: var(--color-primary);
   color: var(--color-on-primary);
   cursor: pointer;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 32px;
   box-shadow: 0 10px 26px rgba(95, 141, 126, 0.24);
@@ -351,4 +360,16 @@
   .time-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+.prototype-shell.personalize-page .prototype-scroll {
+  padding-bottom: 96px !important;
+}
+
+.prototype-shell.personalize-page .time-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.prototype-shell.personalize-page .bottom-action {
+  padding: 14px 16px;
 }

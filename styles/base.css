@@ -67,6 +67,30 @@ a {
   text-decoration: none;
 }
 
+button,
+a,
+[data-next-screen] {
+  touch-action: manipulation;
+}
+
+button:focus-visible,
+a:focus-visible,
+[role="link"]:focus-visible {
+  outline: 3px solid rgba(95, 141, 126, 0.28);
+  outline-offset: 3px;
+}
+
+button,
+[data-next-screen],
+.app-bottom-nav__item {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+[data-next-screen] {
+  cursor: pointer;
+}
+
 body.has-bottom-nav {
   padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom) + 28px) !important;
 }
@@ -104,6 +128,12 @@ body.prototype-shell-enabled {
   overflow-y: auto;
   background: inherit;
   scrollbar-width: thin;
+}
+
+.prototype-scroll::after {
+  display: block;
+  height: 8px;
+  content: "";
 }
 
 .prototype-shell.screen,
@@ -211,9 +241,7 @@ body.prototype-shell-enabled {
   justify-content: flex-start !important;
 }
 
-.prototype-shell .objectives-grid,
 .prototype-shell .objective-images,
-.prototype-shell .time-grid,
 .prototype-shell .profile-grid,
 .prototype-shell .energy-list {
   grid-template-columns: 1fr !important;
@@ -225,6 +253,126 @@ body.prototype-shell-enabled {
 
 .prototype-shell .objective-card {
   min-height: auto !important;
+}
+
+.prototype-toast {
+  position: absolute;
+  right: 18px;
+  bottom: calc(var(--bottom-nav-height) + 18px);
+  left: 18px;
+  z-index: 140;
+  padding: 12px 14px;
+  border: 1px solid rgba(95, 141, 126, 0.18);
+  border-radius: 14px;
+  background: rgba(47, 62, 58, 0.94);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.prototype-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bottom-action {
+  z-index: 110;
+  padding: 14px 16px;
+  border-top: 1px solid rgba(216, 226, 220, 0.72);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 -10px 24px rgba(47, 62, 58, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.motivation-strip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-base);
+  padding: 10px 12px;
+  border: 1px solid rgba(95, 141, 126, 0.14);
+  border-radius: var(--radius-xl);
+  background: var(--color-soft-bg);
+  color: #4a6e62;
+  text-align: left;
+}
+
+.motivation-strip .material-symbols-outlined {
+  flex: 0 0 auto;
+  color: var(--color-primary);
+  font-size: 20px;
+}
+
+.motivation-strip strong {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.summary-card,
+.meal-card,
+.featured-meal,
+.recipe-card,
+.alternative-card,
+.shopping-category,
+.quick-recipe-card,
+.weekly-meal-card,
+.progress-card,
+.profile-card,
+.objective-card,
+.time-card {
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.summary-card,
+.meal-card,
+.recipe-card,
+.alternative-card,
+.shopping-category,
+.quick-recipe-card,
+.weekly-meal-card,
+.progress-card,
+.profile-card {
+  box-shadow: 0 8px 24px rgba(47, 62, 58, 0.07) !important;
+}
+
+.meal-card:active,
+.featured-meal:active,
+.alternative-card:active,
+.quick-recipe-card:active,
+.weekly-meal-card:active,
+.profile-card:active,
+.objective-card:active,
+.time-card:active {
+  transform: scale(0.985);
+}
+
+.app-bottom-nav {
+  filter: drop-shadow(0 -8px 22px rgba(47, 62, 58, 0.08));
+}
+
+.app-bottom-nav__inner {
+  border-radius: 22px 22px 0 0;
+}
+
+.app-bottom-nav__item {
+  position: relative;
+}
+
+.app-bottom-nav__item.is-active::before {
+  position: absolute;
+  top: 4px;
+  width: 30px;
+  height: 3px;
+  border-radius: 999px;
+  background: currentColor;
+  content: "";
+  opacity: 0.55;
 }
 
 .screen {

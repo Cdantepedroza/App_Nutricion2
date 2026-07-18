@@ -38,3 +38,48 @@ if (!document.querySelector(".prototype-shell")) {
   document.body.insertBefore(shell, firstScript || null);
   document.body.classList.add("prototype-shell-enabled");
 }
+
+const showPrototypeToast = (message) => {
+  if (!message) return;
+
+  let toast = document.querySelector(".prototype-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.className = "prototype-toast";
+    toast.setAttribute("role", "status");
+    toast.setAttribute("aria-live", "polite");
+    document.querySelector(".prototype-shell")?.appendChild(toast);
+  }
+
+  toast.textContent = message;
+  toast.classList.add("is-visible");
+
+  window.clearTimeout(showPrototypeToast.hideTimer);
+  showPrototypeToast.hideTimer = window.setTimeout(() => {
+    toast.classList.remove("is-visible");
+  }, 1800);
+};
+
+document.addEventListener("click", (event) => {
+  const toastTrigger = event.target.closest("[data-toast]");
+  if (toastTrigger) {
+    showPrototypeToast(toastTrigger.dataset.toast);
+  }
+
+  const nextTrigger = event.target.closest("[data-next-screen]");
+  if (!nextTrigger || nextTrigger.dataset.nextHandled === "true" || nextTrigger.hasAttribute("data-pressable")) {
+    return;
+  }
+
+  window.location.href = nextTrigger.dataset.nextScreen;
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Enter" && event.key !== " ") return;
+
+  const nextTrigger = event.target.closest("[data-next-screen]");
+  if (!nextTrigger || nextTrigger.tagName === "BUTTON" || nextTrigger.tagName === "A") return;
+
+  event.preventDefault();
+  window.location.href = nextTrigger.dataset.nextScreen;
+});

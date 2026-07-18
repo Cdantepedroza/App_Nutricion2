@@ -70,6 +70,10 @@
   padding: var(--space-base) var(--space-margin-mobile) 0;
 }
 
+.shopping-motivation {
+  margin-bottom: var(--space-gutter);
+}
+
 .shopping-filters {
   display: flex;
   gap: var(--space-base);

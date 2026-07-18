@@ -31,6 +31,9 @@ document.querySelectorAll("[data-pressable]").forEach((button) => {
 
     window.setTimeout(() => {
       button.classList.remove("is-pressed");
+      if (button.dataset.nextScreen) {
+        window.location.href = button.dataset.nextScreen;
+      }
     }, 120);
   });
 });

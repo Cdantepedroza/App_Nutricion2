@@ -124,6 +124,10 @@
   line-height: 16px;
 }
 
+.dashboard-motivation {
+  margin: calc(var(--space-md) * -0.35) 0 var(--space-md);
+}
+
 .period-tab {
   flex: 1;
   min-height: 40px;
