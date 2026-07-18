@@ -29,79 +29,145 @@
   </header>
 
   <main class="progress-content">
-    <section class="motivation-card">
-      <div class="motivation-icon">
-        <span class="material-symbols-outlined" aria-hidden="true">flare</span>
+    <section class="progress-hero" aria-label="Resumen principal de avance">
+      <div class="hero-copy">
+        <span class="eyebrow">Semana en equilibrio</span>
+        <h2>Vas construyendo una rutina que s&iacute; cabe en tu d&iacute;a.</h2>
+        <p id="progress-message">Hoy no buscamos perfecci&oacute;n, buscamos una buena decisi&oacute;n.</p>
       </div>
-      <div>
-        <p>Buen avance, esta semana organizaste mejor tus comidas.</p>
-        <span>&ldquo;La constancia se construye con pasos peque&ntilde;os.&rdquo;</span>
+
+      <div class="progress-ring-wrap" aria-label="78 por ciento de avance semanal">
+        <svg viewBox="0 0 112 112">
+          <circle class="ring-track" cx="56" cy="56" r="46"></circle>
+          <circle class="progress-ring" cx="56" cy="56" r="46" data-progress="78"></circle>
+        </svg>
+        <strong>78%</strong>
+        <small>avance</small>
       </div>
     </section>
 
-    <section class="progress-overview" aria-label="Resumen de progreso">
-      <article class="progress-stat-card">
-        <div class="progress-ring-wrap" aria-label="75 por ciento de comidas planificadas">
-          <svg viewBox="0 0 96 96">
-            <circle class="ring-track" cx="48" cy="48" r="40"></circle>
-            <circle class="progress-ring" cx="48" cy="48" r="40" data-progress="75"></circle>
-          </svg>
-          <strong>75%</strong>
-        </div>
-        <h2>Comidas planificadas</h2>
+    <section class="progress-pulse" aria-label="Indicadores principales">
+      <article>
+        <span class="material-symbols-outlined" aria-hidden="true">restaurant</span>
+        <strong>14/18</strong>
+        <p>comidas cuidadas</p>
       </article>
-
-      <article class="progress-stat-card">
-        <div class="streak-icon">
-          <span class="material-symbols-outlined filled-icon" aria-hidden="true">local_fire_department</span>
-        </div>
+      <article>
+        <span class="material-symbols-outlined" aria-hidden="true">local_fire_department</span>
         <strong>4 d&iacute;as</strong>
-        <h2>Racha saludable</h2>
+        <p>racha realista</p>
+      </article>
+      <article>
+        <span class="material-symbols-outlined" aria-hidden="true">psychiatry</span>
+        <strong>+12</strong>
+        <p>ingredientes</p>
       </article>
     </section>
 
-    <section class="wellness-metrics" aria-labelledby="metrics-title">
-      <h2 id="metrics-title">M&eacute;tricas de bienestar</h2>
+    <section class="mood-check" aria-labelledby="mood-title">
+      <div class="section-heading">
+        <span>Lectura del d&iacute;a</span>
+        <h2 id="mood-title">C&oacute;mo te est&aacute;s cuidando</h2>
+      </div>
 
-      <article class="metric-card">
-        <div class="metric-row">
+      <div class="mood-controls" role="group" aria-label="Estado de energia">
+        <button class="mood-chip is-active" type="button" data-mood="normal">
+          <span class="material-symbols-outlined" aria-hidden="true">wb_sunny</span>
+          Normal
+        </button>
+        <button class="mood-chip" type="button" data-mood="apurada">
+          <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+          Apurada
+        </button>
+        <button class="mood-chip" type="button" data-mood="cansada">
+          <span class="material-symbols-outlined" aria-hidden="true">bedtime</span>
+          Cansada
+        </button>
+      </div>
+
+      <article class="adaptive-card" id="adaptive-card">
+        <div>
+          <span class="material-symbols-outlined" aria-hidden="true">tips_and_updates</span>
+        </div>
+        <p>Buen momento para preparar una comida base y dejar una porci&oacute;n lista para ma&ntilde;ana.</p>
+      </article>
+    </section>
+
+    <section class="indicator-stack" aria-labelledby="indicator-title">
+      <div class="section-heading">
+        <span>Indicadores vivos</span>
+        <h2 id="indicator-title">Tu progreso no es solo nutricional</h2>
+      </div>
+
+      <article class="indicator-card">
+        <div class="indicator-top">
+          <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
           <div>
-            <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
-            <h3>Tiempo ahorrado</h3>
+            <h3>Organizaci&oacute;n</h3>
+            <p>Plan semanal actualizado</p>
           </div>
-          <strong>+2.5h</strong>
+          <strong>82%</strong>
         </div>
-        <div class="metric-bar" aria-hidden="true"><span style="width: 65%;"></span></div>
-        <p>Equivale a 3 sesiones de meditaci&oacute;n extra.</p>
+        <div class="indicator-bar" aria-hidden="true"><span style="width: 82%;"></span></div>
       </article>
 
-      <article class="variety-card">
-        <h3>Variedad de ingredientes</h3>
-        <p>Has usado 12 tipos de vegetales diferentes.</p>
-        <div class="ingredient-tags">
-          <span>Verdes</span>
-          <span>C&iacute;tricos</span>
-          <span>Granos</span>
-          <span>+9</span>
+      <article class="indicator-card">
+        <div class="indicator-top">
+          <span class="material-symbols-outlined" aria-hidden="true">battery_5_bar</span>
+          <div>
+            <h3>Energ&iacute;a</h3>
+            <p>Elegiste opciones ligeras cuando lo necesitaste</p>
+          </div>
+          <strong>68%</strong>
         </div>
-        <span class="material-symbols-outlined nutrition-watermark" aria-hidden="true">nutrition</span>
+        <div class="indicator-bar is-warm" aria-hidden="true"><span style="width: 68%;"></span></div>
+      </article>
+
+      <article class="indicator-card">
+        <div class="indicator-top">
+          <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
+          <div>
+            <h3>Compras inteligentes</h3>
+            <p>5 pendientes para cerrar la semana</p>
+          </div>
+          <strong>73%</strong>
+        </div>
+        <div class="indicator-bar" aria-hidden="true"><span style="width: 73%;"></span></div>
       </article>
     </section>
 
-    <section class="rhythm-card" aria-labelledby="rhythm-title">
-      <div>
-        <h2 id="rhythm-title">Tu ritmo</h2>
-        <p>Constancia vs. intensidad</p>
+    <section class="week-card" aria-labelledby="week-title">
+      <div class="section-heading">
+        <span>Ritmo semanal</span>
+        <h2 id="week-title">Toca un d&iacute;a para ver tu avance</h2>
       </div>
-      <div class="rhythm-bars" aria-hidden="true">
-        <span style="height: 40%;"></span>
-        <span style="height: 60%;"></span>
-        <span style="height: 30%;"></span>
-        <span class="is-accent" style="height: 80%;"></span>
-        <span style="height: 50%;"></span>
-        <span style="height: 70%;"></span>
-        <span style="height: 45%;"></span>
+
+      <div class="week-strip" role="list" aria-label="Dias de la semana">
+        <button class="day-pill is-active" type="button" data-day="Lun" data-meals="3" data-energy="Alta"><strong>L</strong><span></span></button>
+        <button class="day-pill" type="button" data-day="Mar" data-meals="2" data-energy="Media"><strong>M</strong><span></span></button>
+        <button class="day-pill" type="button" data-day="Mie" data-meals="4" data-energy="Alta"><strong>M</strong><span></span></button>
+        <button class="day-pill" type="button" data-day="Jue" data-meals="2" data-energy="Baja"><strong>J</strong><span></span></button>
+        <button class="day-pill" type="button" data-day="Vie" data-meals="3" data-energy="Media"><strong>V</strong><span></span></button>
+        <button class="day-pill" type="button" data-day="Sab" data-meals="1" data-energy="Flexible"><strong>S</strong><span></span></button>
+        <button class="day-pill" type="button" data-day="Dom" data-meals="0" data-energy="Plan"><strong>D</strong><span></span></button>
       </div>
+
+      <article class="day-insight" id="day-insight">
+        <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+        <p><strong>Lunes:</strong> 3 comidas cuidadas y energ&iacute;a alta. Repite lo simple que funcion&oacute;.</p>
+      </article>
+    </section>
+
+    <section class="wins-card" aria-labelledby="wins-title">
+      <div class="section-heading">
+        <span>Peque&ntilde;as victorias</span>
+        <h2 id="wins-title">Lo que ya est&aacute;s logrando</h2>
+      </div>
+      <ul>
+        <li><span class="material-symbols-outlined" aria-hidden="true">done</span> Cambiaste 2 snacks improvisados por opciones preparadas.</li>
+        <li><span class="material-symbols-outlined" aria-hidden="true">done</span> Ahorraste 35 min usando la lista autom&aacute;tica.</li>
+        <li><span class="material-symbols-outlined" aria-hidden="true">done</span> Dejaste una alternativa lista para d&iacute;as de cansancio.</li>
+      </ul>
     </section>
   </main>
   <div data-bottom-nav data-active="progreso"></div>

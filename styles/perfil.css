@@ -1,6 +1,9 @@
 .profile-page {
-  min-height: max(884px, 100dvh);
-  background: var(--color-background);
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 14% 6%, rgba(168, 213, 194, 0.3), transparent 28%),
+    radial-gradient(circle at 92% 18%, rgba(242, 169, 126, 0.14), transparent 28%),
+    var(--color-background);
   color: var(--color-on-background);
 }
 
@@ -18,128 +21,200 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-gutter) var(--space-margin-mobile);
+  padding: var(--space-gutter) var(--space-margin-mobile) var(--space-sm);
   background: rgba(250, 247, 240, 0.86);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
 }
 
-.profile-header span {
+.profile-header span,
+.profile-intro span,
+.profile-section-title span {
   display: block;
   color: var(--color-primary);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  line-height: 16px;
+  line-height: 14px;
   text-transform: uppercase;
 }
 
 .profile-header h1 {
   margin: var(--space-xs) 0 0;
   color: var(--color-on-background);
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
-  line-height: 36px;
+  line-height: 32px;
 }
 
 .profile-settings {
   display: inline-grid;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   place-items: center;
   border-radius: 999px;
-  background: var(--color-surface);
+  background: rgba(255, 255, 255, 0.92);
   color: var(--color-primary);
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(47, 62, 58, 0.08);
+  box-shadow: 0 8px 24px rgba(47, 62, 58, 0.09);
+}
+
+.profile-settings .material-symbols-outlined {
+  font-size: 22px;
 }
 
 .profile-content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
-  padding: 0 var(--space-margin-mobile);
+  gap: var(--space-gutter);
+  padding: var(--space-sm) var(--space-margin-mobile) 0;
 }
 
 .profile-hero,
 .profile-message,
 .profile-grid article,
 .profile-section {
-  border: 1px solid rgba(216, 226, 220, 0.7);
-  border-radius: 16px;
-  background: var(--color-surface);
-  box-shadow: 0 4px 20px rgba(47, 62, 58, 0.06);
+  border: 1px solid rgba(216, 226, 220, 0.72);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 10px 28px rgba(47, 62, 58, 0.07);
 }
 
 .profile-hero {
-  display: flex;
-  align-items: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
   gap: var(--space-gutter);
-  padding: var(--space-md);
+  overflow: hidden;
+  padding: 18px;
+  background:
+    linear-gradient(140deg, rgba(238, 246, 241, 0.96), rgba(255, 255, 255, 0.92) 56%, rgba(255, 240, 228, 0.74));
 }
 
-.profile-hero img {
-  width: 76px;
-  height: 76px;
-  flex: 0 0 76px;
+.profile-hero::after {
+  position: absolute;
+  right: -32px;
+  bottom: -34px;
+  width: 100px;
+  height: 100px;
+  border-radius: 999px;
+  background: rgba(95, 141, 126, 0.1);
+  content: "";
+}
+
+.profile-photo-wrap,
+.profile-intro {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-photo-wrap {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-base);
+}
+
+.profile-photo-wrap img {
+  width: 82px;
+  height: 82px;
   border: 3px solid var(--color-primary-light);
   border-radius: 999px;
   object-fit: cover;
+  box-shadow: 0 10px 24px rgba(95, 141, 126, 0.18);
 }
 
-.profile-hero h2 {
-  margin: 0 0 var(--space-xs);
+.profile-level {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  padding: 0 var(--space-sm);
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.profile-intro h2 {
+  margin: 3px 0 var(--space-xs);
   color: var(--color-on-background);
-  font-size: 24px;
+  font-size: 27px;
   font-weight: 700;
   line-height: 32px;
 }
 
-.profile-hero p,
+.profile-intro p,
 .profile-message p,
-.profile-grid p {
+.profile-grid p,
+.profile-plan p {
   margin: 0;
-  color: var(--color-on-surface-variant);
-  font-size: 14px;
-  line-height: 20px;
+  color: rgba(47, 62, 58, 0.66);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
 }
 
 .profile-message {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
   gap: var(--space-sm);
-  padding: var(--space-gutter);
-  background: var(--color-soft-bg);
+  padding: var(--space-sm);
+  background: rgba(238, 246, 241, 0.86);
 }
 
-.profile-message .material-symbols-outlined {
+.profile-message > .material-symbols-outlined {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.74);
   color: var(--color-primary);
+  font-size: 24px;
 }
 
-.profile-message p {
-  color: #4a6e62;
-  font-weight: 600;
+.profile-message strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--color-on-background);
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .profile-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-gutter);
+  gap: var(--space-base);
 }
 
 .profile-grid article {
-  padding: var(--space-gutter);
+  min-height: 112px;
+  padding: var(--space-sm);
 }
 
 .profile-grid .material-symbols-outlined {
+  display: inline-grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--color-soft-bg);
   color: var(--color-primary);
+  font-size: 22px;
+}
+
+.profile-grid article:nth-child(3) .material-symbols-outlined {
+  background: rgba(255, 214, 190, 0.42);
+  color: var(--color-secondary);
 }
 
 .profile-grid strong {
   display: block;
-  margin: var(--space-base) 0 var(--space-xs);
+  margin: var(--space-base) 0 2px;
   color: var(--color-on-background);
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
 }
 
 .profile-section {
@@ -148,26 +223,48 @@
 
 .profile-section-title {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-gutter);
   margin-bottom: var(--space-gutter);
 }
 
 .profile-section-title h2 {
-  margin: 0;
+  margin: 3px 0 0;
   color: var(--color-on-background);
   font-size: 18px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 24px;
 }
 
 .profile-section-title button {
-  background: transparent;
+  min-height: 32px;
+  padding: 0 var(--space-sm);
+  border-radius: 999px;
+  background: var(--color-soft-bg);
   color: var(--color-primary);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
+}
+
+.plan-meter {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(216, 226, 220, 0.72);
+}
+
+.plan-meter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  animation: fillPlan 700ms ease both;
+}
+
+.profile-plan p {
+  margin-top: var(--space-sm);
 }
 
 .profile-chips {
@@ -178,6 +275,7 @@
 
 .profile-chips span {
   padding: var(--space-base) var(--space-sm);
+  border: 1px solid rgba(95, 141, 126, 0.14);
   border-radius: 999px;
   background: var(--color-soft-bg);
   color: var(--color-primary);
@@ -195,54 +293,131 @@
 .energy-list a {
   display: flex;
   min-width: 0;
+  min-height: 88px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--space-xs);
   padding: var(--space-sm) var(--space-base);
-  border-radius: var(--radius-xl);
-  background: var(--color-background);
+  border: 1px solid rgba(216, 226, 220, 0.72);
+  border-radius: 16px;
+  background: rgba(250, 247, 240, 0.76);
   color: var(--color-primary);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  line-height: 18px;
+  line-height: 16px;
   text-align: center;
 }
 
-.energy-list small {
-  color: var(--color-on-surface-variant);
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 14px;
+.energy-list a.is-selected {
+  border-color: transparent;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: 0 10px 20px rgba(95, 141, 126, 0.2);
 }
 
+.energy-list .material-symbols-outlined {
+  font-size: 23px;
+}
+
+.energy-list small {
+  color: rgba(47, 62, 58, 0.56);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 13px;
+}
+
+.energy-list a.is-selected small {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.ritual-list,
 .settings-list {
   display: grid;
   gap: var(--space-base);
 }
 
+.ritual-item,
 .settings-list button,
 .settings-list a {
   display: grid;
-  min-height: 48px;
-  grid-template-columns: 28px 1fr 24px;
+  min-height: 50px;
   align-items: center;
   gap: var(--space-base);
-  padding: var(--space-sm);
-  border-radius: var(--radius-xl);
-  background: var(--color-background);
+  border-radius: 14px;
+  background: rgba(250, 247, 240, 0.78);
   color: var(--color-on-background);
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
   text-align: left;
 }
 
+.ritual-item {
+  grid-template-columns: 36px 1fr auto;
+  padding: var(--space-sm);
+  border: 1px solid rgba(216, 226, 220, 0.72);
+}
+
+.ritual-item .material-symbols-outlined,
 .settings-list .material-symbols-outlined {
   color: var(--color-primary);
 }
 
-@media (max-width: 380px) {
+.ritual-item strong {
+  padding: 4px var(--space-base);
+  border-radius: 999px;
+  background: rgba(47, 62, 58, 0.08);
+  color: rgba(47, 62, 58, 0.52);
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.ritual-item.is-on strong {
+  background: var(--color-soft-bg);
+  color: var(--color-primary);
+}
+
+.settings-list button,
+.settings-list a {
+  grid-template-columns: 28px 1fr 24px;
+  padding: var(--space-sm);
+  border: 0;
+}
+
+@keyframes fillPlan {
+  from {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  to {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+}
+
+@media (max-width: 390px) {
+  .profile-hero {
+    grid-template-columns: 82px minmax(0, 1fr);
+    padding: var(--space-gutter);
+  }
+
+  .profile-photo-wrap img {
+    width: 74px;
+    height: 74px;
+  }
+
+  .profile-intro h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
   .energy-list {
-    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .energy-list a {
+    font-size: 11px;
   }
 }

@@ -24,19 +24,26 @@
 
   <main class="profile-content">
     <section class="profile-hero">
-      <img
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv8FSruG9t04JjBwCmngsMP40iDPb4Kg3GyfGIWbGTUj42y2bZPg3GX50eSTySOdKlUst4T1GCrTYe0McxXVp-BxyOH2ywR9edrqW4O0f6ULbm1njdnBzbWwaZhdPo0kIGNY6KPMCGwU1gSsIIiBo7Ykk5QFR5MUj-pgl5AY4Q7BTW6GtyNBNpquUDsDNxxmW-9-qFeNJk69pXz2AxujY2aB4LcNpZevs9KyePdFd4fiF_KIobhGjAXw"
-        alt="Foto de perfil de Mayra."
-      >
-      <div>
-        <h2>Usuario</h2>
-        <p>Rutina activa, poco tiempo para cocinar y enfoque en constancia.</p>
+      <div class="profile-photo-wrap">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv8FSruG9t04JjBwCmngsMP40iDPb4Kg3GyfGIWbGTUj42y2bZPg3GX50eSTySOdKlUst4T1GCrTYe0McxXVp-BxyOH2ywR9edrqW4O0f6ULbm1njdnBzbWwaZhdPo0kIGNY6KPMCGwU1gSsIIiBo7Ykk5QFR5MUj-pgl5AY4Q7BTW6GtyNBNpquUDsDNxxmW-9-qFeNJk69pXz2AxujY2aB4LcNpZevs9KyePdFd4fiF_KIobhGjAXw"
+          alt="Foto de perfil de Mayra."
+        >
+        <span class="profile-level">Nivel 4</span>
+      </div>
+      <div class="profile-intro">
+        <span>Plan realista</span>
+        <h2>Mayra</h2>
+        <p>Rutina remota, poco tiempo para cocinar y enfoque en constancia sin presi&oacute;n.</p>
       </div>
     </section>
 
-    <section class="profile-message">
+    <section class="profile-message" id="profile-message">
       <span class="material-symbols-outlined" aria-hidden="true">self_improvement</span>
-      <p>No necesitas hacerlo perfecto. Solo volver a una buena decisi&oacute;n cuando puedas.</p>
+      <div>
+        <strong>Tu frase gu&iacute;a</strong>
+        <p>No necesitas hacerlo perfecto. Solo volver a una buena decisi&oacute;n cuando puedas.</p>
+      </div>
     </section>
 
     <section class="profile-grid" aria-label="Resumen personal">
@@ -50,11 +57,38 @@
         <strong>Remoto</strong>
         <p>Rutina principal</p>
       </article>
+      <article>
+        <span class="material-symbols-outlined" aria-hidden="true">local_fire_department</span>
+        <strong>4 d&iacute;as</strong>
+        <p>Racha saludable</p>
+      </article>
+      <article>
+        <span class="material-symbols-outlined" aria-hidden="true">restaurant</span>
+        <strong>14</strong>
+        <p>Comidas cuidadas</p>
+      </article>
+    </section>
+
+    <section class="profile-section profile-plan" aria-labelledby="profile-plan">
+      <div class="profile-section-title">
+        <div>
+          <span>Resumen personal</span>
+          <h2 id="profile-plan">Tu plan activo</h2>
+        </div>
+        <button type="button" data-next-screen="./personalizar-plan.html">Ajustar</button>
+      </div>
+      <div class="plan-meter" aria-label="78 por ciento de afinidad del plan">
+        <span style="width: 78%;"></span>
+      </div>
+      <p>Tu plan prioriza comidas r&aacute;pidas, compras organizadas y alternativas para d&iacute;as de cansancio.</p>
     </section>
 
     <section class="profile-section" aria-labelledby="profile-goals">
       <div class="profile-section-title">
-        <h2 id="profile-goals">Objetivos activos</h2>
+        <div>
+          <span>Motivaci&oacute;n</span>
+          <h2 id="profile-goals">Objetivos activos</h2>
+        </div>
         <button type="button" data-toast="Puedes ajustar objetivo, rutina y energia desde el onboarding.">Editar</button>
       </div>
       <div class="profile-chips">
@@ -66,10 +100,13 @@
 
     <section class="profile-section" aria-labelledby="profile-energy">
       <div class="profile-section-title">
-        <h2 id="profile-energy">Recomendaciones seg&uacute;n energ&iacute;a</h2>
+        <div>
+          <span>Modo adaptable</span>
+          <h2 id="profile-energy">Recomendaciones seg&uacute;n energ&iacute;a</h2>
+        </div>
       </div>
       <div class="energy-list">
-        <a href="./dashboard.html">
+        <a class="is-selected" href="./dashboard.html">
           <span class="material-symbols-outlined" aria-hidden="true">wb_sunny</span>
           Normal
           <small>Plan del d&iacute;a</small>
@@ -87,9 +124,38 @@
       </div>
     </section>
 
+    <section class="profile-section" aria-labelledby="profile-rituals">
+      <div class="profile-section-title">
+        <div>
+          <span>Rituales suaves</span>
+          <h2 id="profile-rituals">Lo que quieres sostener</h2>
+        </div>
+      </div>
+      <div class="ritual-list">
+        <button class="ritual-item is-on" type="button">
+          <span class="material-symbols-outlined" aria-hidden="true">breakfast_dining</span>
+          Desayuno simple
+          <strong>Activo</strong>
+        </button>
+        <button class="ritual-item is-on" type="button">
+          <span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span>
+          Comprar por bloques
+          <strong>Activo</strong>
+        </button>
+        <button class="ritual-item" type="button">
+          <span class="material-symbols-outlined" aria-hidden="true">bedtime</span>
+          Cena ligera
+          <strong>Pausado</strong>
+        </button>
+      </div>
+    </section>
+
     <section class="profile-section" aria-labelledby="profile-settings">
       <div class="profile-section-title">
-        <h2 id="profile-settings">Preferencias</h2>
+        <div>
+          <span>Control</span>
+          <h2 id="profile-settings">Preferencias</h2>
+        </div>
       </div>
       <div class="settings-list">
         <button type="button" data-next-screen="./personalizar-plan.html">
@@ -114,5 +180,6 @@
   <div data-bottom-nav data-active="perfil"></div>
   <script src="./scripts/prototype-shell.js"></script>
   <script src="./scripts/bottom-nav.js"></script>
+  <script src="./scripts/perfil.js"></script>
 </body>
 </html>
